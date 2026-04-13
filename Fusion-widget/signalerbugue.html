@@ -1,213 +1,219 @@
 <!DOCTYPE html>
-
-<html class="light" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface": "#f7f9fb",
-                    "on-error": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "on-primary-fixed-variant": "#2f2ebe",
-                    "surface-container-lowest": "#ffffff",
-                    "outline-variant": "#c7c4d7",
-                    "on-secondary": "#ffffff",
-                    "surface-bright": "#f7f9fb",
-                    "on-secondary-fixed-variant": "#2f3aa3",
-                    "error": "#ba1a1a",
-                    "primary-fixed-dim": "#c0c1ff",
-                    "secondary-fixed": "#e0e0ff",
-                    "primary-fixed": "#e1e0ff",
-                    "surface-tint": "#494bd6",
-                    "inverse-primary": "#c0c1ff",
-                    "primary": "#4648d4",
-                    "on-surface-variant": "#464554",
-                    "outline": "#767586",
-                    "tertiary-fixed-dim": "#4edea3",
-                    "primary-container": "#6063ee",
-                    "on-secondary-container": "#17228f",
-                    "tertiary-fixed": "#6ffbbe",
-                    "on-tertiary-container": "#000703",
-                    "on-tertiary-fixed-variant": "#005236",
-                    "on-background": "#191c1e",
-                    "secondary": "#4953bc",
-                    "on-secondary-fixed": "#000767",
-                    "on-primary-container": "#fffbff",
-                    "on-surface": "#191c1e",
-                    "on-primary-fixed": "#07006c",
-                    "inverse-surface": "#2d3133",
-                    "on-tertiary": "#ffffff",
-                    "inverse-on-surface": "#eff1f3",
-                    "background": "#f7f9fb",
-                    "surface-variant": "#e0e3e5",
-                    "on-primary": "#ffffff",
-                    "surface-container-highest": "#e0e3e5",
-                    "tertiary-container": "#00885d",
-                    "tertiary": "#006c49",
-                    "secondary-container": "#8792fe",
-                    "surface-container-low": "#f2f4f6",
-                    "on-tertiary-fixed": "#002113",
-                    "surface-container": "#eceef0",
-                    "surface-dim": "#d8dadc",
-                    "secondary-fixed-dim": "#bdc2ff",
-                    "surface-container-high": "#e6e8ea",
-                    "on-error-container": "#93000a"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Inter"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
+<html class="light" lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#f7f9fb", "on-error": "#ffffff", "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#2f2ebe", "surface-container-lowest": "#ffffff",
+            "outline-variant": "#c7c4d7", "on-secondary": "#ffffff",
+            "primary-fixed-dim": "#c0c1ff", "secondary-fixed": "#e0e0ff",
+            "primary-fixed": "#e1e0ff", "surface-tint": "#494bd6",
+            "inverse-primary": "#c0c1ff", "primary": "#4648d4",
+            "on-surface-variant": "#464554", "outline": "#767586",
+            "primary-container": "#6063ee", "on-secondary-container": "#17228f",
+            "tertiary-fixed": "#6ffbbe", "on-tertiary-fixed-variant": "#005236",
+            "on-background": "#191c1e", "secondary": "#4953bc",
+            "on-primary-container": "#fffbff", "on-surface": "#191c1e",
+            "on-primary-fixed": "#07006c", "on-tertiary": "#ffffff",
+            "background": "#f7f9fb", "surface-variant": "#e0e3e5",
+            "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5",
+            "secondary-container": "#8792fe", "surface-container-low": "#f2f4f6",
+            "surface-container": "#eceef0", "surface-dim": "#d8dadc",
+            "surface-container-high": "#e6e8ea", "on-error-container": "#93000a",
+            "error": "#ba1a1a"
           },
-        },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          fontFamily: { "headline": ["Inter"], "body": ["Inter"], "label": ["Inter"] }
+        }
       }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .bg-gradient-brand {
-            background: linear-gradient(135deg, #4648d4 0%, #6063ee 100%);
-        }
-        .glass-panel {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-    </style>
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-panel { background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .bg-gradient-brand { background: linear-gradient(135deg, #4648d4 0%, #6063ee 100%); }
+    .nav-item { transition: all 0.2s ease; }
+    .nav-item.active { color: #4648d4; }
+    .nav-item.active .nav-indicator { width: 24px; height: 3px; background: #4648d4; border-radius: 2px; margin: 0 auto 2px; }
+    .nav-indicator { width: 24px; height: 3px; margin: 0 auto 2px; }
+    input[type="text"], input[type="email"], textarea {
+      background: #f2f4f6;
+      border: none;
+      outline: none;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+      background: #ffffff;
+      box-shadow: 0 0 0 2px rgba(70, 72, 212, 0.2);
+    }
+  </style>
 </head>
-<body class="bg-surface font-body text-on-surface overflow-hidden">
-<!-- Background: SaaS Dashboard (Blurred) -->
-<div class="fixed inset-0 z-0 overflow-hidden filter blur-md opacity-40 scale-105">
-<div class="flex h-full">
-<!-- Sidebar -->
-<div class="w-64 bg-surface-container border-r border-outline-variant/10 p-6 flex flex-col gap-8">
-<div class="h-8 w-32 bg-outline-variant/30 rounded-lg"></div>
-<div class="space-y-4">
-<div class="h-10 w-full bg-outline-variant/20 rounded-lg"></div>
-<div class="h-10 w-full bg-outline-variant/20 rounded-lg"></div>
-<div class="h-10 w-full bg-outline-variant/20 rounded-lg"></div>
-</div>
-</div>
-<!-- Main Content -->
-<div class="flex-1 p-10 space-y-8">
-<div class="flex justify-between items-center">
-<div class="h-10 w-48 bg-outline-variant/40 rounded-lg"></div>
-<div class="flex gap-4">
-<div class="h-10 w-10 bg-outline-variant/30 rounded-full"></div>
-<div class="h-10 w-24 bg-primary/20 rounded-lg"></div>
-</div>
-</div>
-<!-- Bento Grid Mockup -->
-<div class="grid grid-cols-3 gap-6 h-[500px]">
-<div class="col-span-2 bg-surface-container-low rounded-xl p-6 shadow-sm">
-<div class="h-full w-full bg-outline-variant/10 rounded-lg"></div>
-</div>
-<div class="bg-surface-container-low rounded-xl p-6 shadow-sm space-y-4">
-<div class="h-32 w-full bg-outline-variant/10 rounded-lg"></div>
-<div class="h-32 w-full bg-outline-variant/10 rounded-lg"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Main View: Widget Open -->
-<div class="fixed right-6 bottom-6 z-50 flex items-end gap-4">
-<!-- FAB Closed (For Comparison) -->
-<div class="hidden md:flex flex-col items-center gap-2 mb-2">
-<span class="text-[0.625rem] font-bold text-outline uppercase tracking-widest bg-surface-container-high px-2 py-1 rounded">État fermé</span>
-<button class="w-14 h-14 rounded-full bg-gradient-brand shadow-[0_8px_24px_-4px_rgba(23,34,143,0.2)] flex items-center justify-center text-white transition-transform active:scale-90 hover:scale-105">
-<span class="material-symbols-outlined text-[28px]">help</span>
-</button>
-</div>
-<!-- Widget Panel -->
-<div class="w-[380px] h-[720px] max-h-[921px] bg-surface-container-lowest/85 glass-panel rounded-[12px] shadow-[0_8px_32px_-4px_rgba(23,34,143,0.12)] border border-outline-variant/15 flex flex-col overflow-hidden">
-<!-- TopAppBar -->
-<header class="flex justify-between items-center px-6 py-5 bg-surface-container-low/50">
-<div class="flex flex-col">
-<span class="text-[0.6875rem] font-bold text-primary uppercase tracking-wider">SupportKit</span>
-<h1 class="text-[1.125rem] font-medium text-slate-900">Signaler un problème</h1>
-</div>
-<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant/50 transition-colors text-outline">
-<span class="material-symbols-outlined">close</span>
-</button>
-</header>
-<!-- Scrollable Content -->
-<div class="flex-1 overflow-y-auto p-6 space-y-6">
-<!-- Subject Input -->
-<div class="space-y-2">
-<label class="text-[0.875rem] font-medium text-on-surface-variant px-1">Objet du problème</label>
-<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low border-0 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:italic placeholder:text-outline/60 text-[0.875rem]" placeholder="Ex: Erreur lors du chargement des données" type="text"/>
-</div>
-<!-- Description Textarea -->
-<div class="space-y-2">
-<div class="flex justify-between px-1">
-<label class="text-[0.875rem] font-medium text-on-surface-variant">Description détaillée</label>
-<span class="text-[0.6875rem] text-outline">0 / 500</span>
-</div>
-<textarea class="w-full min-h-[140px] p-4 rounded-xl bg-surface-container-low border-0 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:italic placeholder:text-outline/60 text-[0.875rem] resize-none" placeholder="Veuillez décrire les étapes pour reproduire l'erreur..."></textarea>
-</div>
-<!-- Screenshot Action -->
-<div class="space-y-3">
-<button class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-primary-fixed text-on-primary-fixed-variant font-medium text-[0.875rem] hover:bg-primary-fixed-dim transition-colors">
-<span class="material-symbols-outlined text-[20px]">photo_camera</span>
-                        Capturer une capture d’écran automatique
-                    </button>
-<!-- Captured Preview -->
-<div class="relative group rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm bg-surface-container-high">
-<img class="w-full h-32 object-cover opacity-80" data-alt="blurred dashboard UI interface showing charts and data tables with a professional blue and gray aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI839jOJpOBxGTT50yScCqvVJo89lKvC0TNxE7vSam3kgXcRJbF02_vIqzB7yZVdDrd8BIXq36qMF7UzibVl5hE8m3ypyN-D1VY0610VI-9WHLStV1ef6hwIq23g3WMGDa-_cYaEF4gPvzVjww8yDhNdh0PpVnjQWs_8wiKHXItqSS7F--JHh024Vg_50jlCEuaBR1Q96w4T-20YUDm6B7al0bWUg2g6PuNQ5WpbF64R3tKHW1UDMWDcwiyra9scElV1o_vHvCTQ"/>
-<div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center gap-3">
-<button class="px-3 py-1.5 bg-white text-slate-900 text-[0.75rem] font-semibold rounded-lg shadow-sm hover:bg-slate-50 transition-colors">Modifier</button>
-<button class="px-3 py-1.5 bg-white/90 text-slate-900 text-[0.75rem] font-semibold rounded-lg shadow-sm hover:bg-white transition-colors">Flouter les données sensibles</button>
-</div>
-</div>
-</div>
-<!-- Priority Selector -->
-<div class="space-y-3">
-<label class="text-[0.875rem] font-medium text-on-surface-variant px-1">Priorité</label>
-<div class="flex gap-2">
-<button class="flex-1 py-2 rounded-lg bg-surface-variant/30 text-on-surface-variant text-[0.75rem] font-bold uppercase tracking-wider border border-transparent hover:border-outline-variant transition-all">Basse</button>
-<button class="flex-1 py-2 rounded-lg bg-orange-100 text-orange-700 text-[0.75rem] font-bold uppercase tracking-wider border-2 border-orange-500 transition-all">Moyenne</button>
-<button class="flex-1 py-2 rounded-lg bg-red-100 text-red-700 text-[0.75rem] font-bold uppercase tracking-wider border border-transparent hover:border-red-300 transition-all">Haute</button>
-</div>
-</div>
-<!-- Bug Checkbox -->
-<label class="flex items-center gap-3 p-4 bg-surface-container-low rounded-xl cursor-pointer group hover:bg-surface-container-high transition-colors">
-<div class="relative flex items-center">
-<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
-</div>
-<span class="text-[0.8125rem] text-on-surface-variant group-hover:text-on-surface font-medium">Signaler comme bug automatique détecté</span>
-</label>
-<!-- Email field -->
-<div class="space-y-2">
-<label class="text-[0.875rem] font-medium text-on-surface-variant px-1">Votre email</label>
-<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low/50 border-0 text-outline text-[0.875rem] cursor-not-allowed" readonly="" type="email" value="alexandre.martin@saas-corp.com"/>
-</div>
-</div>
-<!-- Footer Action -->
-<footer class="p-6 bg-surface-container-lowest">
-<button class="w-full h-14 bg-gradient-brand text-white font-bold rounded-xl shadow-[0_8px_20px_-4px_rgba(70,72,212,0.3)] hover:shadow-[0_12px_24px_-4px_rgba(70,72,212,0.4)] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
-                    Envoyer le ticket
-                    <span class="material-symbols-outlined text-[20px]">send</span>
-</button>
-<div class="mt-4 flex justify-center items-center gap-1.5">
-<span class="text-[0.6875rem] text-outline/60">Sécurisé par</span>
-<span class="text-[0.6875rem] font-bold text-outline/80">SupportKit Intelligence</span>
-</div>
-</footer>
-</div>
-</div>
-</body></html>
+<body class="flex items-center justify-center min-h-screen p-4 overflow-hidden" style="background: #e2e8f0;">
+
+  <!-- Background blur mock -->
+  <div class="fixed inset-0 z-0 overflow-hidden opacity-30 scale-105 filter blur-md">
+    <div class="flex h-full">
+      <div class="w-64 bg-surface-container border-r border-outline-variant/10 p-6 flex flex-col gap-8">
+        <div class="h-8 w-32 bg-outline-variant/30 rounded-lg"></div>
+        <div class="space-y-4">
+          <div class="h-10 w-full bg-outline-variant/20 rounded-lg"></div>
+          <div class="h-10 w-full bg-outline-variant/20 rounded-lg"></div>
+          <div class="h-10 w-full bg-outline-variant/20 rounded-lg"></div>
+        </div>
+      </div>
+      <div class="flex-1 p-10 space-y-8">
+        <div class="flex justify-between items-center">
+          <div class="h-10 w-48 bg-outline-variant/40 rounded-lg"></div>
+          <div class="flex gap-4">
+            <div class="h-10 w-10 bg-outline-variant/30 rounded-full"></div>
+            <div class="h-10 w-24 bg-primary/20 rounded-lg"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-6 h-[500px]">
+          <div class="col-span-2 bg-surface-container-low rounded-xl p-6 shadow-sm">
+            <div class="h-full w-full bg-outline-variant/10 rounded-lg"></div>
+          </div>
+          <div class="bg-surface-container-low rounded-xl p-6 shadow-sm space-y-4">
+            <div class="h-32 w-full bg-outline-variant/10 rounded-lg"></div>
+            <div class="h-32 w-full bg-outline-variant/10 rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Widget Panel -->
+  <div class="fixed right-6 bottom-24 w-[380px] h-[660px] glass-panel rounded-[16px] overflow-hidden shadow-[0_16px_40px_-8px_rgba(70,72,212,0.18),0_4px_12px_-2px_rgba(0,0,0,0.08)] border border-white/60 flex flex-col z-50">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center px-5 py-4 border-b border-outline-variant/30">
+      <div>
+        <div class="flex items-center gap-2 mb-0.5">
+          <div class="w-7 h-7 rounded-lg bg-gradient-brand flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-[16px]" style="font-variation-settings:'FILL' 1;">smart_toy</span>
+          </div>
+          <span class="text-[0.6875rem] font-bold text-primary uppercase tracking-wider">SupportKit</span>
+        </div>
+        <h1 class="text-[1rem] font-semibold text-on-surface pl-9">Signaler un problème</h1>
+      </div>
+      <button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-outline active:scale-95">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </header>
+
+    <!-- Scrollable Content -->
+    <div class="flex-1 overflow-y-auto p-5 space-y-5">
+
+      <!-- Subject -->
+      <div class="space-y-1.5">
+        <label class="text-[0.8125rem] font-medium text-on-surface-variant px-1">Objet du problème</label>
+        <input class="w-full h-11 px-4 rounded-xl text-[0.875rem] placeholder:text-outline/60 placeholder:italic"
+               type="text" placeholder="Ex : Erreur lors du chargement des données"/>
+      </div>
+
+      <!-- Description -->
+      <div class="space-y-1.5">
+        <div class="flex justify-between px-1">
+          <label class="text-[0.8125rem] font-medium text-on-surface-variant">Description détaillée</label>
+          <span class="text-[0.6875rem] text-outline">0 / 500</span>
+        </div>
+        <textarea class="w-full min-h-[120px] p-4 rounded-xl text-[0.875rem] placeholder:text-outline/60 placeholder:italic resize-none"
+                  placeholder="Décrivez les étapes pour reproduire l'erreur…"></textarea>
+      </div>
+
+      <!-- Screenshot -->
+      <div class="space-y-2.5">
+        <button class="w-full h-11 flex items-center justify-center gap-2 rounded-xl bg-primary-fixed text-on-primary-fixed-variant font-medium text-[0.875rem] hover:bg-primary-fixed-dim transition-colors">
+          <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+          Capturer une capture d'écran
+        </button>
+        <div class="relative group rounded-xl overflow-hidden border border-outline-variant/20">
+          <div class="w-full h-28 bg-surface-container flex items-center justify-center">
+            <span class="material-symbols-outlined text-outline/40 text-[48px]">screenshot_monitor</span>
+          </div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100">
+            <button class="px-3 py-1.5 bg-white text-slate-900 text-[0.75rem] font-semibold rounded-lg shadow-sm hover:bg-slate-50">Modifier</button>
+            <button class="px-3 py-1.5 bg-white/90 text-slate-900 text-[0.75rem] font-semibold rounded-lg shadow-sm hover:bg-white">Flouter</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Priority -->
+      <div class="space-y-2">
+        <label class="text-[0.8125rem] font-medium text-on-surface-variant px-1">Priorité</label>
+        <div class="flex gap-2">
+          <button class="flex-1 py-2 rounded-lg bg-surface-container text-on-surface-variant text-[0.75rem] font-bold uppercase tracking-wider hover:bg-surface-variant transition-colors">Basse</button>
+          <button class="flex-1 py-2 rounded-lg bg-orange-100 text-orange-700 text-[0.75rem] font-bold uppercase tracking-wider border-2 border-orange-500">Moyenne</button>
+          <button class="flex-1 py-2 rounded-lg bg-surface-container text-on-surface-variant text-[0.75rem] font-bold uppercase tracking-wider hover:bg-error-container hover:text-error transition-colors">Haute</button>
+        </div>
+      </div>
+
+      <!-- Bug Checkbox -->
+      <label class="flex items-center gap-3 p-3.5 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container transition-colors group">
+        <input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+        <span class="text-[0.8125rem] text-on-surface-variant font-medium group-hover:text-on-surface">Signaler comme bug détecté automatiquement</span>
+      </label>
+
+      <!-- Email -->
+      <div class="space-y-1.5">
+        <label class="text-[0.8125rem] font-medium text-on-surface-variant px-1">Votre email</label>
+        <input class="w-full h-11 px-4 rounded-xl text-[0.875rem] text-outline cursor-not-allowed opacity-70"
+               type="email" value="alexandre.martin@saas-corp.com" readonly/>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="px-5 py-4 border-t border-outline-variant/30 bg-white/50">
+      <a href="succes.html">
+        <button class="w-full h-13 py-3.5 bg-gradient-brand text-white font-bold rounded-xl shadow-[0_4px_16px_-2px_rgba(70,72,212,0.35)] hover:shadow-[0_6px_20px_-2px_rgba(70,72,212,0.45)] active:scale-[0.98] transition-all flex items-center justify-center gap-2 text-[0.9375rem]">
+          Envoyer le ticket
+          <span class="material-symbols-outlined text-[18px]">send</span>
+        </button>
+      </a>
+      <div class="mt-3 flex justify-center items-center gap-1.5">
+        <span class="text-[0.6875rem] text-outline/60">Sécurisé par</span>
+        <span class="text-[0.6875rem] font-bold text-outline/80">SupportKit Intelligence</span>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="flex border-t border-outline-variant/30 bg-white/70 px-2">
+      <a href="listeticket.html" class="nav-item flex-1 py-3 flex flex-col items-center gap-0.5 text-outline hover:text-primary">
+        <div class="nav-indicator"></div>
+        <span class="material-symbols-outlined text-[22px]">home</span>
+        <span class="text-[10px] font-semibold tracking-wider uppercase">Home</span>
+      </a>
+      <!-- <a href="#" class="nav-item flex-1 py-3 flex flex-col items-center gap-0.5 text-outline hover:text-primary">
+        <div class="nav-indicator"></div>
+        <span class="material-symbols-outlined text-[22px]">chat_bubble</span>
+        <span class="text-[10px] font-semibold tracking-wider uppercase">Messages</span>
+      </a> -->
+      <a href="signalerbugue.html" class="nav-item active flex-1 py-3 flex flex-col items-center gap-0.5">
+        <div class="nav-indicator"></div>
+        <span class="material-symbols-outlined text-[22px]">help</span>
+        <span class="text-[10px] font-semibold tracking-wider uppercase">Help</span>
+      </a>
+      <!-- <a href="#" class="nav-item flex-1 py-3 flex flex-col items-center gap-0.5 text-outline hover:text-primary">
+        <div class="nav-indicator"></div>
+        <span class="material-symbols-outlined text-[22px]">campaign</span>
+        <span class="text-[10px] font-semibold tracking-wider uppercase">News</span>
+      </a> -->
+    </nav>
+  </div>
+
+  <!-- FAB -->
+  <button class="fixed right-6 bottom-6 w-14 h-14 rounded-full bg-gradient-brand flex items-center justify-center shadow-[0_8px_24px_-4px_rgba(70,72,212,0.35)] active:scale-95 hover:scale-105 transition-all z-50">
+    <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings:'FILL' 1;">smart_toy</span>
+  </button>
+</body>
+</html>
