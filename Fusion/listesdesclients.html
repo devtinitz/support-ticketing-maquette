@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SupportKit - Gestion des Clients</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Satoshi:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#452000",
+                        "on-surface": "#dae2fd",
+                        "on-primary-container": "#0d0096",
+                        "surface-dim": "#0b1326",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary-fixed": "#301400",
+                        "surface-variant": "#2d3449",
+                        "on-primary-fixed": "#07006c",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-container": "#00311f",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#002113",
+                        "surface-container-highest": "#2d3449",
+                        "inverse-primary": "#494bd6",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-container-lowest": "#060e20",
+                        "on-surface-variant": "#c7c4d7",
+                        "tertiary": "#ffb783",
+                        "surface-tint": "#c0c1ff",
+                        "on-secondary": "#003824",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-container-high": "#222a3d",
+                        "primary": "#c0c1ff",
+                        "tertiary-container": "#d97721",
+                        "tertiary-fixed": "#ffdcc5",
+                        "secondary-fixed": "#6ffbbe",
+                        "inverse-on-surface": "#283044",
+                        "inverse-surface": "#dae2fd",
+                        "surface": "#0b1326",
+                        "on-tertiary": "#4f2500",
+                        "on-error": "#690005",
+                        "on-background": "#dae2fd",
+                        "outline-variant": "#464554",
+                        "surface-bright": "#31394d",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#00a572",
+                        "surface-container": "#171f33",
+                        "secondary-fixed-dim": "#4edea3",
+                        "background": "#0b1326",
+                        "on-primary": "#1000a9",
+                        "outline": "#908fa0",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "primary-container": "#8083ff",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-tertiary-fixed-variant": "#703700",
+                        "secondary": "#4edea3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Satoshi", "Inter"],
+                        "label": ["Satoshi"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Satoshi', sans-serif; background-color: #0b1326; color: #dae2fd; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass { background: rgba(49, 57, 77, 0.6); backdrop-filter: blur(12px); }
+        .btn-primary-gradient { background: linear-gradient(135deg, #c0c1ff 0%, #8083ff 100%); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-[#171f33] shadow-2xl shadow-indigo-950/20 flex flex-col py-8 px-6 z-50">
+<div class="flex items-center gap-3 mb-10 px-2">
+<div class="w-8 h-8 rounded-lg bg-[#6366F1] flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight text-white leading-none">SupportKit</h1>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Dashboard</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Tableau de bord</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span class="font-medium">Tickets</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
+<span class="material-symbols-outlined">folder</span>
+<span class="font-medium">Projets</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl text-white font-bold border-r-2 border-[#6366F1] bg-[#222a3d]/50 transition-all duration-200 active:scale-95 group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-medium">Clients</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium">Membres</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-medium">Notifications</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-slate-800/50">
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 mb-4" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">Paramètres</span>
+</a>
+<button class="w-full py-4 btn-primary-gradient text-on-primary-container font-bold rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-indigo-500/20">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Nouveau ticket</span>
+</button>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-20 bg-[#0b1326]/60 backdrop-blur-xl z-40 flex justify-between items-center px-10">
+<div class="flex items-center gap-6 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-[20px]">search</span>
+<input class="w-full bg-surface-container-highest/30 border-none rounded-full py-2.5 pl-12 pr-4 text-sm text-on-surface placeholder-slate-500 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="Rechercher un client ou un ticket..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 mr-4">
+<button class="p-2.5 rounded-full text-slate-400 hover:bg-white/5 transition-all active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2.5 rounded-full text-slate-400 hover:bg-white/5 transition-all active:scale-95">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-slate-800">
+<div class="text-right">
+<p class="text-xs font-bold text-white leading-none">Admin SupportKit</p>
+<p class="text-[10px] text-slate-500 mt-1 uppercase tracking-tighter">Administrateur</p>
+</div>
+<img alt="Admin Avatar" class="w-10 h-10 rounded-full border-2 border-surface-container-high" data-alt="professional corporate headshot of a software administrator with a clean tech background and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKldPsTIBSGR7jWVS4j-tf1ezZNO-0ZemrZZNKeVgW3mL6vvoseYFd_hMQI9cJiKaHinMOKyJ90LY6zlVLqHQ1K7jXWerW1uI3RefAHSgQ03GFKNW-kKDLoDdQ7czpXtDE0R7jHEx2boc70IO7zpCRVb6XovWrIMn_4ilzbim8u-uT_5s739LdEAh4NFJtwQxSSDWllJCQJGHsjq5PIGjnA4NPqIEYdZQWkE3hWwU81OCN_nuIqiTBpceG_8wigcGFBoiB-44H9Hc"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-[280px] pt-32 px-10 pb-20 min-h-screen bg-surface">
+<!-- Header Section -->
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-4xl font-bold tracking-tight text-white mb-2 font-headline">Gestion des Clients</h2>
+<p class="text-slate-400 max-w-lg">Gérez votre base de données clients, suivez les tickets actifs et supervisez les projets en cours.</p>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-highest hover:bg-surface-bright text-white font-bold rounded-xl transition-all active:scale-95 border border-outline-variant/10">
+<span class="material-symbols-outlined">person_add</span>
+<span>+ Ajouter un client</span>
+</button>
+</div>
+<!-- Metrics Bento (Glass Cards) -->
+<div class="grid grid-cols-4 gap-6 mb-12">
+<div class="col-span-1 glass p-6 rounded-2xl border border-white/5">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary">groups</span>
+<span class="text-xs font-bold text-secondary tracking-widest uppercase">+12%</span>
+</div>
+<p class="text-3xl font-bold text-white mb-1">1,284</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Total Clients</p>
+</div>
+<div class="col-span-1 glass p-6 rounded-2xl border border-white/5">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-tertiary">confirmation_number</span>
+<span class="text-xs font-bold text-error tracking-widest uppercase">+5.2%</span>
+</div>
+<p class="text-3xl font-bold text-white mb-1">42</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Tickets Ouverts</p>
+</div>
+<div class="col-span-2 glass p-6 rounded-2xl border border-white/5 relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-xs text-primary font-bold uppercase tracking-widest mb-4">Activité Récente</p>
+<div class="flex gap-2 items-end h-16">
+<div class="w-full bg-primary/20 rounded-t h-[40%]"></div>
+<div class="w-full bg-primary/20 rounded-t h-[60%]"></div>
+<div class="w-full bg-primary/20 rounded-t h-[30%]"></div>
+<div class="w-full bg-primary/20 rounded-t h-[80%]"></div>
+<div class="w-full bg-primary/20 rounded-t h-[100%]"></div>
+<div class="w-full bg-primary/20 rounded-t h-[50%]"></div>
+<div class="w-full bg-primary/20 rounded-t h-[70%]"></div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-5">
+<span class="material-symbols-outlined text-[120px]">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Table Section (Surface Container) -->
+<div class="bg-surface-container-low rounded-[24px] overflow-hidden">
+<div class="px-8 py-6 border-b border-outline-variant/10 flex justify-between items-center">
+<h3 class="text-lg font-bold text-white">Liste des Clients</h3>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg text-slate-400 hover:bg-white/5"><span class="material-symbols-outlined">filter_list</span></button>
+<button class="p-2 rounded-lg text-slate-400 hover:bg-white/5"><span class="material-symbols-outlined">download</span></button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[10px] uppercase tracking-[0.15em] text-slate-500 font-bold border-b border-outline-variant/5">
+<th class="px-8 py-5">Nom</th>
+<th class="px-8 py-5">Email</th>
+<th class="px-8 py-5">Projet associé</th>
+<th class="px-8 py-5 text-center">Tickets</th>
+<th class="px-8 py-5">Dernier ticket</th>
+<th class="px-8 py-5">Statut</th>
+<th class="px-8 py-5 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Client Row 1 -->
+<tr class="hover:bg-white/[0.02] transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary font-bold">JD</div>
+<div>
+<p class="text-white font-bold">Jean Dupont</p>
+<p class="text-[11px] text-slate-500">Inscrit depuis 2 mois</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 text-slate-300 text-sm">j.dupont@techcorp.fr</td>
+<td class="px-8 py-6">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-xs text-on-surface-variant">Cloud Migration 2024</span>
+</td>
+<td class="px-8 py-6 text-center">
+<span class="text-white font-bold">12</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="text-xs text-white truncate max-w-[150px]">Erreur API d'authentification</span>
+<span class="text-[10px] text-slate-500">Il y a 2 heures</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary text-[10px] font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Actif
+                                </span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="opacity-0 group-hover:opacity-100 p-2 text-slate-500 hover:text-white transition-all">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Client Row 2 -->
+<tr class="hover:bg-white/[0.02] transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary font-bold">MB</div>
+<div>
+<p class="text-white font-bold">Marie Bernard</p>
+<p class="text-[11px] text-slate-500">Inscrite depuis 1 an</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 text-slate-300 text-sm">m.bernard@startup.io</td>
+<td class="px-8 py-6">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-xs text-on-surface-variant">Mobile App Redesign</span>
+</td>
+<td class="px-8 py-6 text-center">
+<span class="text-white font-bold">3</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="text-xs text-white truncate max-w-[150px]">Problème de paiement Stripe</span>
+<span class="text-[10px] text-slate-500">Hier à 14:30</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span> Inactif
+                                </span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="opacity-0 group-hover:opacity-100 p-2 text-slate-500 hover:text-white transition-all">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Client Row 3 -->
+<tr class="hover:bg-white/[0.02] transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">PL</div>
+<div>
+<p class="text-white font-bold">Pierre Lefebvre</p>
+<p class="text-[11px] text-slate-500">Inscrit hier</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 text-slate-300 text-sm">pierre@global-it.com</td>
+<td class="px-8 py-6">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-xs text-on-surface-variant">Maintenance S1</span>
+</td>
+<td class="px-8 py-6 text-center">
+<span class="text-white font-bold">1</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="text-xs text-white truncate max-w-[150px]">Demande de devis</span>
+<span class="text-[10px] text-slate-500">Il y a 5 min</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-container/20 text-tertiary text-[10px] font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Nouveau
+                                </span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="opacity-0 group-hover:opacity-100 p-2 text-slate-500 hover:text-white transition-all">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Client Row 4 -->
+<tr class="hover:bg-white/[0.02] transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container/20 flex items-center justify-center text-error font-bold">SR</div>
+<div>
+<p class="text-white font-bold">Sophie Robert</p>
+<p class="text-[11px] text-slate-500">Inscrite depuis 3 ans</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 text-slate-300 text-sm">s.robert@agence-v.fr</td>
+<td class="px-8 py-6">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-xs text-on-surface-variant">Audit Sécurité</span>
+</td>
+<td class="px-8 py-6 text-center">
+<span class="text-white font-bold">56</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="text-xs text-white truncate max-w-[150px]">Faille critique detectée</span>
+<span class="text-[10px] text-slate-500">Il y a 10 heures</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary text-[10px] font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Actif
+                                </span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="opacity-0 group-hover:opacity-100 p-2 text-slate-500 hover:text-white transition-all">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-8 py-5 border-t border-outline-variant/5 flex justify-between items-center text-xs text-slate-500">
+<p>Affichage de 1-4 sur 1,284 clients</p>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest/50 hover:bg-surface-container-highest transition-all text-white disabled:opacity-30" disabled="">Précédent</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-bright transition-all text-white">Suivant</button>
+</div>
+</div>
+</div>
+<!-- Floating Command Bar -->
+<div class="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 px-6 py-4 glass rounded-2xl border border-white/10 shadow-2xl z-50">
+<span class="text-slate-400 text-sm font-medium mr-4">Raccourcis rapides :</span>
+<button class="flex items-center gap-2 text-xs font-bold text-white uppercase tracking-widest hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm">search</span>
+                Rechercher (⌘K)
+            </button>
+<div class="w-px h-4 bg-white/10 mx-2"></div>
+<button class="flex items-center gap-2 text-xs font-bold text-white uppercase tracking-widest hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm">mail</span>
+                Inviter un client
+            </button>
+<div class="w-px h-4 bg-white/10 mx-2"></div>
+<button class="flex items-center gap-2 text-xs font-bold text-white uppercase tracking-widest hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm">print</span>
+                Rapport Mensuel
+            </button>
+</div>
+</main>
+</body></html>
