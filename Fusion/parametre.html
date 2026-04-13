@@ -1,345 +1,378 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SupportKit Dashboard - Paramètres</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Satoshi:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="dark" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SupportKit Dashboard - Paramètres</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Satoshi:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "on-tertiary-container": "#452000",
-                        "on-surface": "#dae2fd",
-                        "on-primary-container": "#0d0096",
-                        "surface-dim": "#0b1326",
-                        "surface-container-low": "#131b2e",
-                        "on-tertiary-fixed": "#301400",
-                        "surface-variant": "#2d3449",
-                        "on-primary-fixed": "#07006c",
-                        "primary-fixed": "#e1e0ff",
-                        "on-secondary-container": "#00311f",
-                        "error-container": "#93000a",
-                        "on-secondary-fixed": "#002113",
-                        "surface-container-highest": "#2d3449",
-                        "inverse-primary": "#494bd6",
-                        "primary-fixed-dim": "#c0c1ff",
-                        "surface-container-lowest": "#060e20",
-                        "on-surface-variant": "#c7c4d7",
-                        "tertiary": "#ffb783",
-                        "surface-tint": "#c0c1ff",
-                        "on-secondary": "#003824",
-                        "on-primary-fixed-variant": "#2f2ebe",
-                        "surface-container-high": "#222a3d",
-                        "primary": "#c0c1ff",
-                        "tertiary-container": "#d97721",
-                        "tertiary-fixed": "#ffdcc5",
-                        "secondary-fixed": "#6ffbbe",
-                        "inverse-on-surface": "#283044",
-                        "inverse-surface": "#dae2fd",
-                        "surface": "#0b1326",
-                        "on-tertiary": "#4f2500",
-                        "on-error": "#690005",
-                        "on-background": "#dae2fd",
-                        "outline-variant": "#464554",
-                        "surface-bright": "#31394d",
-                        "on-error-container": "#ffdad6",
-                        "secondary-container": "#00a572",
-                        "surface-container": "#171f33",
-                        "secondary-fixed-dim": "#4edea3",
-                        "background": "#0b1326",
-                        "on-primary": "#1000a9",
-                        "outline": "#908fa0",
-                        "error": "#ffb4ab",
-                        "tertiary-fixed-dim": "#ffb783",
-                        "primary-container": "#8083ff",
-                        "on-secondary-fixed-variant": "#005236",
-                        "on-tertiary-fixed-variant": "#703700",
-                        "secondary": "#4edea3"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
+                        "on-tertiary-container": "#452000", "on-surface": "#dae2fd", "on-primary-container": "#0d0096",
+                        "surface-dim": "#0b1326", "surface-container-low": "#131b2e", "on-tertiary-fixed": "#301400",
+                        "surface-variant": "#2d3449", "on-primary-fixed": "#07006c", "primary-fixed": "#e1e0ff",
+                        "on-secondary-container": "#00311f", "error-container": "#93000a", "on-secondary-fixed": "#002113",
+                        "surface-container-highest": "#2d3449", "inverse-primary": "#494bd6", "primary-fixed-dim": "#c0c1ff",
+                        "surface-container-lowest": "#060e20", "on-surface-variant": "#c7c4d7", "tertiary": "#ffb783",
+                        "surface-tint": "#c0c1ff", "on-secondary": "#003824", "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-container-high": "#222a3d", "primary": "#c0c1ff", "tertiary-container": "#d97721",
+                        "tertiary-fixed": "#ffdcc5", "secondary-fixed": "#6ffbbe", "inverse-on-surface": "#283044",
+                        "inverse-surface": "#dae2fd", "surface": "#0b1326", "on-tertiary": "#4f2500", "on-error": "#690005",
+                        "on-background": "#dae2fd", "outline-variant": "#464554", "surface-bright": "#31394d",
+                        "on-error-container": "#ffdad6", "secondary-container": "#00a572", "surface-container": "#171f33",
+                        "secondary-fixed-dim": "#4edea3", "background": "#0b1326", "on-primary": "#1000a9",
+                        "outline": "#908fa0", "error": "#ffb4ab", "tertiary-fixed-dim": "#ffb783",
+                        "primary-container": "#8083ff", "on-secondary-fixed-variant": "#005236",
+                        "on-tertiary-fixed-variant": "#703700", "secondary": "#4edea3"
                     },
                     "fontFamily": {
-                        "headline": ["Inter"],
-                        "body": ["Satoshi"],
-                        "label": ["Satoshi"]
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Satoshi", "sans-serif"],
+                        "label": ["Satoshi", "sans-serif"]
                     }
                 },
             },
         }
     </script>
-<style>
-        body { font-family: 'Satoshi', sans-serif; }
-        h1, h2, h3, .headline-font { font-family: 'Inter', sans-serif; }
+    <style>
+        body {
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Inter', sans-serif;
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .active-glow {
-            box-shadow: 0 0 20px -5px rgba(192, 193, 255, 0.3);
-        }
     </style>
 </head>
-<body class="bg-surface text-on-surface min-h-screen">
-<!-- SideNavBar -->
-<aside class="fixed left-0 top-0 h-full w-[280px] bg-[#171f33] shadow-2xl shadow-indigo-950/20 flex flex-col py-8 px-6 z-50">
-<div class="mb-10 flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center">
-<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">shield_person</span>
-</div>
-<div>
-<h1 class="text-xl font-bold tracking-tight text-white headline-font">SupportKit</h1>
-<p class="text-xs text-slate-400 font-medium uppercase tracking-widest">Dashboard</p>
-</div>
-</div>
-<nav class="flex-1 space-y-2">
-<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
-<span class="material-symbols-outlined">dashboard</span>
-<span class="font-medium">Tableau de bord</span>
-</a>
-<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
-<span class="material-symbols-outlined">confirmation_number</span>
-<span class="font-medium">Tickets</span>
-</a>
-<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
-<span class="material-symbols-outlined">folder</span>
-<span class="font-medium">Projets</span>
-</a>
-<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
-<span class="material-symbols-outlined">group</span>
-<span class="font-medium">Clients</span>
-</a>
-<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
-<span class="material-symbols-outlined">person</span>
-<span class="font-medium">Membres</span>
-</a>
-<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
-<span class="material-symbols-outlined">notifications</span>
-<span class="font-medium">Notifications</span>
-</a>
-<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-white font-bold border-r-2 border-[#6366F1] bg-[#222a3d] transition-all duration-200 active:scale-95 group" href="#">
-<span class="material-symbols-outlined">settings</span>
-<span class="font-medium">Paramètres</span>
-</a>
-</nav>
-<div class="mt-auto">
-<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all">
-<span class="material-symbols-outlined">add</span>
-<span>Nouveau ticket</span>
-</button>
-</div>
-</aside>
-<!-- TopNavBar -->
-<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-20 px-10 bg-[#0b1326]/60 backdrop-blur-xl z-40 flex justify-between items-center">
-<div class="flex items-center bg-surface-container-high px-4 py-2 rounded-xl w-96 active:scale-[0.98] transition-transform">
-<span class="material-symbols-outlined text-slate-400 mr-3">search</span>
-<input class="bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-slate-500 w-full text-sm" placeholder="Rechercher dans les paramètres..." type="text"/>
-</div>
-<div class="flex items-center gap-6">
-<button class="text-slate-400 hover:bg-white/5 p-2 rounded-full transition-all active:scale-95">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<div class="flex items-center gap-3 pl-6 border-l border-outline-variant/20">
-<div class="text-right">
-<p class="text-sm font-bold headline-font">Jean Dupont</p>
-<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Administrateur</p>
-</div>
-<img alt="Admin Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-primary/20" data-alt="Professional headshot of a smiling middle-aged man in a dark business suit with soft studio lighting and a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZLV0_f2DHaDwxsban8mPeG9njjMJcP6V4tnBIT3FQpIuaJMTlnfDknW8yzPq7fwOeDJiDbD0qZBIJBxRtEjxrVQGjJQrcKdRouWLK5q4jvkM-eBo4iyKMXLSf7h1xnfJwTJKb8Etih7K8qd9FbqnM6CDO4dkq56xA9OXxJIXP5H5qTdKcYdPQE8TMFGiEuE9iKBP6UKGd0F23U9_N8m8sfsxa8AifxHPcesns8b7EyMdGJ6Khz4VMn8oDwjJ4m0C-BzQAgd_7uYM"/>
-</div>
-</div>
-</header>
-<!-- Main Content -->
-<main class="ml-[280px] pt-32 px-10 pb-20">
-<div class="max-w-5xl mx-auto">
-<header class="mb-10">
-<h2 class="text-4xl font-extrabold headline-font mb-2 tracking-tight">Paramètres</h2>
-<p class="text-slate-400 max-w-2xl">Gérez les préférences de votre compte, configurez vos notifications et intégrez vos outils tiers pour optimiser votre flux de travail SupportKit.</p>
-</header>
-<!-- Tabs Navigation -->
-<div class="flex gap-8 mb-12 border-b border-outline-variant/10">
-<button class="pb-4 text-primary font-bold border-b-2 border-primary transition-all text-sm tracking-wide">Général</button>
-<button class="pb-4 text-slate-400 hover:text-slate-200 transition-all text-sm tracking-wide">Notifications email</button>
-<button class="pb-4 text-slate-400 hover:text-slate-200 transition-all text-sm tracking-wide">Sécurité</button>
-<button class="pb-4 text-slate-400 hover:text-slate-200 transition-all text-sm tracking-wide">Intégrations</button>
-<button class="pb-4 text-slate-400 hover:text-slate-200 transition-all text-sm tracking-wide">API</button>
-</div>
-<!-- Bento Grid Settings Layout -->
-<div class="grid grid-cols-12 gap-6">
-<!-- Profile Settings Card -->
-<section class="col-span-12 lg:col-span-8 bg-surface-container-high rounded-2xl p-8 shadow-sm">
-<div class="flex items-center gap-3 mb-8">
-<span class="material-symbols-outlined text-primary">person_outline</span>
-<h3 class="text-xl font-bold headline-font">Profil de l'utilisateur</h3>
-</div>
-<div class="flex items-start gap-10 mb-8">
-<div class="relative group">
-<img alt="User Profile" class="w-32 h-32 rounded-2xl object-cover" data-alt="Close-up of a smiling male professional with short dark hair, soft natural lighting on face, wearing a navy blue blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0nr6TOZPGLpGbaTnm8mIu_-1f2p_ADJkgnX33uF17hSPfQ9w1uqmJCFpohgwEvbgE3d2zP437j9qWQMYFhakWinXimQ-iDZOqoAz8z7kN3jM0pEbHWa-hS9p9fwskZdeiBixOjt7ni-7RvwACOFEFdbCobpRlJjUYIU4rvCqUKPkRI8vaAqq4lQYawwVlgI5EZOZWe8r5AXdRR8LRNS0FphoPy_x5bDy9SjLgtuvw82ZsefcItxnqgZPSAPIEViOpqbtH5mBQaMM"/>
-<button class="absolute -bottom-2 -right-2 bg-primary text-on-primary p-2 rounded-lg shadow-lg hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-sm">edit</span>
-</button>
-</div>
-<div class="flex-1 grid grid-cols-2 gap-6">
-<div class="space-y-1.5">
-<label class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Prénom</label>
-<input class="w-full bg-surface-container-highest border-none rounded-xl focus:ring-1 focus:ring-primary text-on-surface py-3" type="text" value="Jean"/>
-</div>
-<div class="space-y-1.5">
-<label class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Nom</label>
-<input class="w-full bg-surface-container-highest border-none rounded-xl focus:ring-1 focus:ring-primary text-on-surface py-3" type="text" value="Dupont"/>
-</div>
-<div class="col-span-2 space-y-1.5">
-<label class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Adresse Email</label>
-<input class="w-full bg-surface-container-highest border-none rounded-xl focus:ring-1 focus:ring-primary text-on-surface py-3" type="email" value="jean.dupont@supportkit.io"/>
-</div>
-</div>
-</div>
-<div class="flex justify-end gap-4 mt-8 pt-8 border-t border-outline-variant/10">
-<button class="px-6 py-2.5 rounded-xl font-bold text-slate-400 hover:bg-white/5 transition-all">Annuler</button>
-<button class="px-8 py-2.5 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold shadow-lg shadow-indigo-900/20 active:scale-95 transition-all">Enregistrer les modifications</button>
-</div>
-</section>
-<!-- Workspace Status Card -->
-<section class="col-span-12 lg:col-span-4 bg-gradient-to-br from-surface-container-high to-surface-container-low rounded-2xl p-8 relative overflow-hidden">
-<div class="relative z-10">
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-secondary">rocket_launch</span>
-<h3 class="text-xl font-bold headline-font text-white">Espace de travail</h3>
-</div>
-<div class="mb-8">
-<p class="text-sm text-slate-400 mb-2">Plan actuel</p>
-<div class="flex items-baseline gap-2">
-<span class="text-3xl font-extrabold text-white">Entreprise</span>
-<span class="text-xs font-bold text-secondary-fixed bg-secondary-container/20 px-2 py-0.5 rounded-full uppercase tracking-tighter">Actif</span>
-</div>
-</div>
-<div class="space-y-4">
-<div class="flex justify-between items-end">
-<span class="text-sm font-medium">Tickets utilisés</span>
-<span class="text-sm font-bold">1,240 / 5,000</span>
-</div>
-<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-secondary w-[24%] rounded-full shadow-[0_0_10px_rgba(78,222,163,0.3)]"></div>
-</div>
-</div>
-<button class="mt-8 w-full py-3 rounded-xl border border-outline-variant/30 text-white font-bold hover:bg-white/5 transition-all text-sm">Gérer l'abonnement</button>
-</div>
-<!-- Decorative element -->
-<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/5 blur-[80px] rounded-full"></div>
-</section>
-<!-- Organization Settings Card -->
-<section class="col-span-12 bg-surface-container-low rounded-2xl p-8">
-<div class="flex items-center justify-between mb-10">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-tertiary">business</span>
-<h3 class="text-xl font-bold headline-font">Paramètres de l'organisation</h3>
-</div>
-<div class="flex items-center gap-2 px-3 py-1 bg-surface-container-highest rounded-full">
-<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-<span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Tous les systèmes sont opérationnels</span>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">public</span>
-</div>
-<div>
-<h4 class="font-bold text-sm">URL du workspace</h4>
-<p class="text-xs text-slate-500">supportkit.io/acme-corp</p>
-</div>
-</div>
-<p class="text-xs text-slate-400 leading-relaxed">Personnalisez votre URL pour que vos clients puissent facilement identifier votre portail de support.</p>
-<button class="text-primary text-xs font-bold hover:underline">Changer l'URL</button>
-</div>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center">
-<span class="material-symbols-outlined text-secondary">language</span>
-</div>
-<div>
-<h4 class="font-bold text-sm">Langue par défaut</h4>
-<p class="text-xs text-slate-500">Français (FR)</p>
-</div>
-</div>
-<p class="text-xs text-slate-400 leading-relaxed">Définissez la langue par défaut pour votre interface et les communications automatiques envoyées aux clients.</p>
-<button class="text-secondary text-xs font-bold hover:underline">Modifier la langue</button>
-</div>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center">
-<span class="material-symbols-outlined text-tertiary">schedule</span>
-</div>
-<div>
-<h4 class="font-bold text-sm">Fuseau horaire</h4>
-<p class="text-xs text-slate-500">(GMT+01:00) Paris</p>
-</div>
-</div>
-<p class="text-xs text-slate-400 leading-relaxed">Les tickets et les rapports d'activité seront synchronisés selon ce paramètre temporel global.</p>
-<button class="text-tertiary text-xs font-bold hover:underline">Ajuster le temps</button>
-</div>
-</div>
-</section>
-<!-- Toggle Settings -->
-<section class="col-span-12 lg:col-span-6 space-y-4">
-<div class="bg-surface-container-high rounded-2xl p-6 flex items-center justify-between group">
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">visibility</span>
-</div>
-<div>
-<h4 class="font-bold text-sm">Profil public</h4>
-<p class="text-xs text-slate-500">Permettre aux clients de voir votre photo de profil.</p>
-</div>
-</div>
-<button class="w-12 h-6 bg-primary rounded-full relative transition-all duration-300">
-<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
-</button>
-</div>
-<div class="bg-surface-container-high rounded-2xl p-6 flex items-center justify-between group">
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined">analytics</span>
-</div>
-<div>
-<h4 class="font-bold text-sm">Analyse de données</h4>
-<p class="text-xs text-slate-500">Autoriser l'envoi de données anonymes pour l'IA.</p>
-</div>
-</div>
-<button class="w-12 h-6 bg-surface-container-highest rounded-full relative transition-all duration-300">
-<div class="absolute left-1 top-1 w-4 h-4 bg-slate-500 rounded-full"></div>
-</button>
-</div>
-</section>
-<!-- Quick Actions / Danger Zone -->
-<section class="col-span-12 lg:col-span-6">
-<div class="bg-error-container/10 border border-error/20 rounded-2xl p-6 h-full flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-error">warning</span>
-<h4 class="font-bold text-sm text-error">Zone de danger</h4>
-</div>
-<p class="text-xs text-on-surface-variant leading-relaxed mb-6">
-                                La suppression de votre espace de travail est irréversible. Toutes vos données de tickets, clients et historiques seront définitivement effacées.
-                            </p>
-</div>
-<button class="w-fit px-6 py-2 rounded-xl bg-error/10 text-error font-bold text-xs border border-error/30 hover:bg-error/20 transition-all">Supprimer l'organisation</button>
-</div>
-</section>
-</div>
-</div>
-</main>
-<!-- Background Decorative Gradient -->
-<div class="fixed top-0 right-0 -z-10 w-full h-full pointer-events-none opacity-20">
-<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 blur-[150px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
-<div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 blur-[150px] rounded-full -translate-x-1/2 translate-y-1/2"></div>
-</div>
-</body></html>
+
+<body class="bg-surface text-on-surface selection:bg-primary/30 min-h-screen">
+    <!-- SideNavBar (Permanent Shell) -->
+    <aside
+        class="fixed left-0 top-0 h-full w-[280px] bg-[#171f33] shadow-2xl shadow-indigo-950/20 flex flex-col py-8 px-6 z-50">
+        <div class="flex items-center gap-3 mb-12">
+            <div
+                class="w-10 h-10 bg-gradient-to-br from-primary to-primary-container rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+                <span class="material-symbols-outlined text-on-primary-container"
+                    style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white">SupportKit</h1>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold">Dashboard</p>
+            </div>
+        </div>
+        <nav class="flex-1 space-y-2">
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="dashboard.html">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="font-medium">Tableau de bord</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="listedestickets.html">
+                <span class="material-symbols-outlined">confirmation_number</span>
+                <span class="font-medium">Tickets</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="listeprojet.html">
+                <span class="material-symbols-outlined">folder</span>
+                <span class="font-medium">Projets</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="listesdesclients.html">
+                <span class="material-symbols-outlined">group</span>
+                <span class="font-medium">Clients</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="gestionmembres.html">
+                <span class="material-symbols-outlined">person</span>
+                <span class="font-medium">Membres</span>
+            </a>
+        </nav>
+        <div class="mt-auto space-y-2">
+            <button
+                class="w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/10 hover:scale-[0.98] active:scale-95 transition-all mb-6">
+                <a href="ajoutprojet.html">+ Nouveau projet</a>
+            </button>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="notification.html">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="font-medium">Notifications</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-white font-bold border-r-2 border-[#6366F1] bg-[#222a3d]/50"
+                href="parametre.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+                <span class="font-medium">Paramètres</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 right-0 w-[calc(100%-280px)] h-20 px-10 bg-[#0b1326]/60 backdrop-blur-xl z-40 flex justify-between items-center">
+        <div class="flex items-center gap-6 w-1/2">
+            <div class="relative w-full max-w-md">
+                <span
+                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                <input
+                    class="w-full bg-surface-container-high/40 border-none rounded-full py-2.5 pl-11 pr-4 text-sm focus:ring-1 focus:ring-primary/50 placeholder:text-slate-500 transition-all"
+                    placeholder="Rechercher dans les paramètres..." type="text" />
+            </div>
+        </div>
+        <div class="flex items-center gap-6">
+            <button class="text-slate-400 hover:bg-white/5 p-2 rounded-full transition-all">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div class="flex items-center gap-3 pl-4 border-l border-white/10">
+                <div class="text-right">
+                    <p class="text-xs font-bold text-white leading-none">Jean Dupont</p>
+                    <p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Administrateur</p>
+                </div>
+                <img alt="Admin Avatar" class="w-10 h-10 rounded-full border-2 border-primary/20 object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZLV0_f2DHaDwxsban8mPeG9njjMJcP6V4tnBIT3FQpIuaJMTlnfDknW8yzPq7fwOeDJiDbD0qZBIJBxRtEjxrVQGjJQrcKdRouWLK5q4jvkM-eBo4iyKMXLSf7h1xnfJwTJKb8Etih7K8qd9FbqnM6CDO4dkq56xA9OXxJIXP5H5qTdKcYdPQE8TMFGiEuE9iKBP6UKGd0F23U9_N8m8sfsxa8AifxHPcesns8b7EyMdGJ6Khz4VMn8oDwjJ4m0C-BzQAgd_7uYM" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="ml-[280px] pt-32 px-10 pb-20">
+        <div class="max-w-5xl mx-auto">
+            <header class="mb-10">
+                <h2 class="text-4xl font-extrabold mb-2 tracking-tight">Paramètres</h2>
+                <p class="text-slate-400 max-w-2xl">Gérez les préférences de votre compte, configurez vos notifications
+                    et intégrez vos outils tiers pour optimiser votre flux de travail SupportKit.</p>
+            </header>
+            <!-- Tabs Navigation -->
+            <div class="flex gap-8 mb-12 border-b border-outline-variant/10">
+                <button
+                    class="pb-4 text-primary font-bold border-b-2 border-primary transition-all text-sm tracking-wide">Général</button>
+                <button
+                    class="pb-4 text-slate-400 hover:text-slate-200 transition-all text-sm tracking-wide">Notifications
+                    email</button>
+                <button
+                    class="pb-4 text-slate-400 hover:text-slate-200 transition-all text-sm tracking-wide">Sécurité</button>
+                <button
+                    class="pb-4 text-slate-400 hover:text-slate-200 transition-all text-sm tracking-wide">Intégrations</button>
+                <button
+                    class="pb-4 text-slate-400 hover:text-slate-200 transition-all text-sm tracking-wide">API</button>
+            </div>
+            <!-- Bento Grid Settings Layout -->
+            <div class="grid grid-cols-12 gap-6">
+                <!-- Profile Settings Card -->
+                <section class="col-span-12 lg:col-span-8 bg-surface-container-high rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="material-symbols-outlined text-primary">person_outline</span>
+                        <h3 class="text-xl font-bold">Profil de l'utilisateur</h3>
+                    </div>
+                    <div class="flex items-start gap-10 mb-8">
+                        <div class="relative group">
+                            <img alt="User Profile" class="w-32 h-32 rounded-2xl object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0nr6TOZPGLpGbaTnm8mIu_-1f2p_ADJkgnX33uF17hSPfQ9w1uqmJCFpohgwEvbgE3d2zP437j9qWQMYFhakWinXimQ-iDZOqoAz8z7kN3jM0pEbHWa-hS9p9fwskZdeiBixOjt7ni-7RvwACOFEFdbCobpRlJjUYIU4rvCqUKPkRI8vaAqq4lQYawwVlgI5EZOZWe8r5AXdRR8LRNS0FphoPy_x5bDy9SjLgtuvw82ZsefcItxnqgZPSAPIEViOpqbtH5mBQaMM" />
+                            <button
+                                class="absolute -bottom-2 -right-2 bg-primary text-on-primary p-2 rounded-lg shadow-lg hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-sm">edit</span>
+                            </button>
+                        </div>
+                        <div class="flex-1 grid grid-cols-2 gap-6">
+                            <div class="space-y-1.5">
+                                <label
+                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Prénom</label>
+                                <input
+                                    class="w-full bg-surface-container-highest border-none rounded-xl focus:ring-1 focus:ring-primary text-on-surface py-3"
+                                    type="text" value="Jean" />
+                            </div>
+                            <div class="space-y-1.5">
+                                <label
+                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Nom</label>
+                                <input
+                                    class="w-full bg-surface-container-highest border-none rounded-xl focus:ring-1 focus:ring-primary text-on-surface py-3"
+                                    type="text" value="Dupont" />
+                            </div>
+                            <div class="col-span-2 space-y-1.5">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Adresse
+                                    Email</label>
+                                <input
+                                    class="w-full bg-surface-container-highest border-none rounded-xl focus:ring-1 focus:ring-primary text-on-surface py-3"
+                                    type="email" value="jean.dupont@supportkit.io" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end gap-4 mt-8 pt-8 border-t border-outline-variant/10">
+                        <button
+                            class="px-6 py-2.5 rounded-xl font-bold text-slate-400 hover:bg-white/5 transition-all">Annuler</button>
+                        <button
+                            class="px-8 py-2.5 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold shadow-lg shadow-indigo-900/20 active:scale-95 transition-all">Enregistrer
+                            les modifications</button>
+                    </div>
+                </section>
+                <!-- Workspace Status Card -->
+                <section
+                    class="col-span-12 lg:col-span-4 bg-gradient-to-br from-surface-container-high to-surface-container-low rounded-2xl p-8 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-secondary">rocket_launch</span>
+                            <h3 class="text-xl font-bold text-white">Espace de travail</h3>
+                        </div>
+                        <div class="mb-8">
+                            <p class="text-sm text-slate-400 mb-2">Plan actuel</p>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-extrabold text-white">Entreprise</span>
+                                <span
+                                    class="text-xs font-bold text-secondary-fixed bg-secondary-container/20 px-2 py-0.5 rounded-full uppercase tracking-tighter">Actif</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-end">
+                                <span class="text-sm font-medium">Tickets utilisés</span>
+                                <span class="text-sm font-bold">1,240 / 5,000</span>
+                            </div>
+                            <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[24%] rounded-full"></div>
+                            </div>
+                        </div>
+                        <button
+                            class="mt-8 w-full py-3 rounded-xl border border-outline-variant/30 text-white font-bold hover:bg-white/5 transition-all text-sm">Gérer
+                            l'abonnement</button>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/5 blur-[80px] rounded-full"></div>
+                </section>
+                <!-- Organization Settings Card -->
+                <section class="col-span-12 bg-surface-container-low rounded-2xl p-8">
+                    <div class="flex items-center justify-between mb-10">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-tertiary">business</span>
+                            <h3 class="text-xl font-bold">Paramètres de l'organisation</h3>
+                        </div>
+                        <div class="flex items-center gap-2 px-3 py-1 bg-surface-container-highest rounded-full">
+                            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Tous les
+                                systèmes sont opérationnels</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary">public</span></div>
+                                <div>
+                                    <h4 class="font-bold text-sm">URL du workspace</h4>
+                                    <p class="text-xs text-slate-500">supportkit.io/acme-corp</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">Personnalisez votre URL pour que vos
+                                clients puissent facilement identifier votre portail de support.</p>
+                            <button class="text-primary text-xs font-bold hover:underline">Changer l'URL</button>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-secondary">language</span></div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Langue par défaut</h4>
+                                    <p class="text-xs text-slate-500">Français (FR)</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">Définissez la langue par défaut pour votre
+                                interface et les communications automatiques envoyées aux clients.</p>
+                            <button class="text-secondary text-xs font-bold hover:underline">Modifier la langue</button>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-tertiary">schedule</span></div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Fuseau horaire</h4>
+                                    <p class="text-xs text-slate-500">(GMT+01:00) Paris</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">Les tickets et les rapports d'activité
+                                seront synchronisés selon ce paramètre temporel global.</p>
+                            <button class="text-tertiary text-xs font-bold hover:underline">Ajuster le temps</button>
+                        </div>
+                    </div>
+                </section>
+                <!-- Toggle Settings -->
+                <section class="col-span-12 lg:col-span-6 space-y-4">
+                    <div class="bg-surface-container-high rounded-2xl p-6 flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">visibility</span></div>
+                            <div>
+                                <h4 class="font-bold text-sm">Profil public</h4>
+                                <p class="text-xs text-slate-500">Permettre aux clients de voir votre photo de profil.
+                                </p>
+                            </div>
+                        </div>
+                        <button class="w-12 h-6 bg-primary rounded-full relative transition-all duration-300">
+                            <div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+                        </button>
+                    </div>
+                    <div class="bg-surface-container-high rounded-2xl p-6 flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                                <span class="material-symbols-outlined">analytics</span></div>
+                            <div>
+                                <h4 class="font-bold text-sm">Analyse de données</h4>
+                                <p class="text-xs text-slate-500">Autoriser l'envoi de données anonymes pour l'IA.</p>
+                            </div>
+                        </div>
+                        <button
+                            class="w-12 h-6 bg-surface-container-highest rounded-full relative transition-all duration-300">
+                            <div class="absolute left-1 top-1 w-4 h-4 bg-slate-500 rounded-full"></div>
+                        </button>
+                    </div>
+                </section>
+                <!-- Danger Zone -->
+                <section class="col-span-12 lg:col-span-6">
+                    <div
+                        class="bg-error-container/10 border border-error/20 rounded-2xl p-6 h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="material-symbols-outlined text-error">warning</span>
+                                <h4 class="font-bold text-sm text-error">Zone de danger</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant leading-relaxed mb-6">La suppression de votre
+                                espace de travail est irréversible. Toutes vos données de tickets, clients et
+                                historiques seront définitivement effacées.</p>
+                        </div>
+                        <button
+                            class="w-fit px-6 py-2 rounded-xl bg-error/10 text-error font-bold text-xs border border-error/30 hover:bg-error/20 transition-all">Supprimer
+                            l'organisation</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Background Decorative Gradient -->
+    <div class="fixed top-0 right-0 -z-10 w-full h-full pointer-events-none opacity-20">
+        <div
+            class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 blur-[150px] rounded-full translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 blur-[150px] rounded-full -translate-x-1/2 translate-y-1/2">
+        </div>
+    </div>
+</body>
+
+</html>
