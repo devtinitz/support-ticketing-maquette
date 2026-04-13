@@ -1,224 +1,232 @@
 <!DOCTYPE html>
-
 <html class="light" lang="fr">
-
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface": "#f7f9fb",
-                        "on-error": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "on-primary-fixed-variant": "#2f2ebe",
-                        "surface-container-lowest": "#ffffff",
-                        "outline-variant": "#c7c4d7",
-                        "on-secondary": "#ffffff",
-                        "surface-bright": "#f7f9fb",
-                        "on-secondary-fixed-variant": "#2f3aa3",
-                        "error": "#ba1a1a",
-                        "primary-fixed-dim": "#c0c1ff",
-                        "secondary-fixed": "#e0e0ff",
-                        "primary-fixed": "#e1e0ff",
-                        "surface-tint": "#494bd6",
-                        "inverse-primary": "#c0c1ff",
-                        "primary": "#4648d4",
-                        "on-surface-variant": "#464554",
-                        "outline": "#767586",
-                        "tertiary-fixed-dim": "#4edea3",
-                        "primary-container": "#6063ee",
-                        "on-primary-container": "#fffbff",
-                        "tertiary-fixed": "#6ffbbe",
-                        "on-tertiary-container": "#000703",
-                        "on-tertiary-fixed-variant": "#005236",
-                        "on-background": "#191c1e",
-                        "secondary": "#4953bc",
-                        "on-secondary-fixed": "#000767",
-                        "on-primary-container": "#fffbff",
-                        "on-surface": "#191c1e",
-                        "on-primary-fixed": "#07006c",
-                        "inverse-surface": "#2d3133",
-                        "on-tertiary": "#ffffff",
-                        "inverse-on-surface": "#eff1f3",
-                        "background": "#f7f9fb",
-                        "surface-variant": "#e0e3e5",
-                        "on-primary": "#ffffff",
-                        "surface-container-highest": "#e0e3e5",
-                        "tertiary-container": "#00885d",
-                        "tertiary": "#006c49",
-                        "secondary-container": "#8792fe",
-                        "surface-container-low": "#f2f4f6",
-                        "on-tertiary-fixed": "#002113",
-                        "surface-container": "#eceef0",
-                        "surface-dim": "#d8dadc",
-                        "secondary-fixed-dim": "#bdc2ff",
-                        "surface-container-high": "#e6e8ea",
-                        "on-error-container": "#93000a"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Inter"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    }
-                }
-            }
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#f7f9fb", "on-error": "#ffffff", "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#2f2ebe", "surface-container-lowest": "#ffffff",
+            "outline-variant": "#c7c4d7", "on-secondary": "#ffffff", "surface-bright": "#f7f9fb",
+            "error": "#ba1a1a", "primary-fixed-dim": "#c0c1ff", "secondary-fixed": "#e0e0ff",
+            "primary-fixed": "#e1e0ff", "surface-tint": "#494bd6", "inverse-primary": "#c0c1ff",
+            "primary": "#4648d4", "on-surface-variant": "#464554", "outline": "#767586",
+            "tertiary-fixed-dim": "#4edea3", "primary-container": "#6063ee",
+            "on-secondary-container": "#17228f", "tertiary-fixed": "#6ffbbe",
+            "on-tertiary-container": "#000703", "on-tertiary-fixed-variant": "#005236",
+            "on-background": "#191c1e", "secondary": "#4953bc", "on-secondary-fixed": "#000767",
+            "on-primary-container": "#fffbff", "on-surface": "#191c1e", "on-primary-fixed": "#07006c",
+            "inverse-surface": "#2d3133", "on-tertiary": "#ffffff", "inverse-on-surface": "#eff1f3",
+            "background": "#f7f9fb", "surface-variant": "#e0e3e5", "on-primary": "#ffffff",
+            "surface-container-highest": "#e0e3e5", "tertiary-container": "#00885d",
+            "tertiary": "#006c49", "secondary-container": "#8792fe", "surface-container-low": "#f2f4f6",
+            "on-tertiary-fixed": "#002113", "surface-container": "#eceef0", "surface-dim": "#d8dadc",
+            "secondary-fixed-dim": "#bdc2ff", "surface-container-high": "#e6e8ea",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          fontFamily: { "headline": ["Inter"], "body": ["Inter"], "label": ["Inter"] }
         }
-    </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #e0e3e5;
-            border-radius: 10px;
-        }
-
-        .glass-header {
-            background: rgba(247, 249, 251, 0.85);
-            backdrop-filter: blur(12px);
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+    .glass-panel { background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .bg-gradient-brand { background: linear-gradient(135deg, #4648d4 0%, #6063ee 100%); }
+    .nav-item { transition: all 0.2s ease; }
+    .nav-item.active { color: #4648d4; }
+    .nav-item.active .nav-indicator { width: 24px; height: 3px; background: #4648d4; border-radius: 2px; margin: 0 auto 2px; }
+    .nav-indicator { width: 24px; height: 3px; margin: 0 auto 2px; }
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #c7c4d7; border-radius: 10px; }
+    textarea {
+      background: #f2f4f6;
+      border: none;
+      outline: none;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    textarea:focus {
+      background: #ffffff;
+      box-shadow: 0 0 0 2px rgba(70, 72, 212, 0.2);
+    }
+  </style>
 </head>
+<body class="flex items-center justify-center min-h-screen" style="background: #e2e8f0;">
 
-<body class="bg-slate-200 font-body flex items-center justify-center min-h-screen">
-    <div
-        class="fixed right-6 bottom-24 w-[380px] h-[600px] bg-white/85 backdrop-blur-md rounded-[12px] overflow-hidden flex flex-col shadow-[0_8px_24px_-4px_rgba(23,34,143,0.12)] border border-white/20">
-        <header class="p-4 bg-surface-container-low flex flex-col gap-2 shrink-0">
-            <div class="flex items-center justify-between">
-                <button
-                    class="flex items-center gap-1 text-primary text-xs font-semibold hover:opacity-75 transition-opacity">
-                    <span class="material-symbols-outlined text-sm">arrow_back</span>
-                    Mes tickets
-                </button>
-                <button class="text-outline hover:text-on-surface transition-colors">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-            </div>
-            <div class="mt-1">
-                <div class="flex items-center justify-between mb-1">
-                    <h1 class="text-on-surface font-semibold text-[1.125rem] leading-tight">#SK-8742 – Erreur 500 lors
-                        du paiement</h1>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span
-                        class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#d1fae5] text-[#065f46]">
-                        En cours
-                    </span>
-                    <span class="text-outline text-[11px]">Créé il y a 2 jours</span>
-                </div>
-            </div>
-        </header>
-        <main class="flex-1 overflow-y-auto custom-scrollbar bg-surface p-4 space-y-6">
-            <section class="space-y-3">
-                <p class="text-on-surface-variant text-[0.875rem] leading-relaxed">
-                    Bonjour, j'ai tenté d'effectuer un achat via Apple Pay et j'ai reçu une erreur 500 juste après la
-                    validation biométrique. La transaction semble en attente sur mon compte bancaire.
-                </p>
-                <div class="rounded-xl overflow-hidden border border-outline-variant/30">
-                    <img alt="Screenshot d'erreur de paiement" class="w-full h-auto object-cover"
-                        data-alt="Modern mobile app checkout screen showing a red error message banner with code 500 and a generic payment failed icon"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcfoVMKMcVPH0_HArhmbtN3WUVRceQWKG2UAHb5Eh6Te6BG8tQixF4fqXVi2MkHDhglg9n7wCM1nhpuIlR2szbDmxiIIXDKeETQ8l-W1RFP_6snBI__OKiSvwlGYF03FL4UroW16ihxCB-rUOzRgUGv7OLxlAGoymMv3caNHIoZmvz5nuXmNnUgyY-ZLnENg-hph7pt5BG7rI3fdAfUboSRNlUi8ru_bZ-_c0phiWhxQl2OqsbIsm29zEi56qlK3oUxXmyJl7-ZQ" />
-                </div>
-            </section>
-            <div class="flex flex-col gap-4">
-                <div class="flex items-center gap-3">
-                    <div class="h-px flex-1 bg-outline-variant/30"></div>
-                    <span class="text-outline text-[11px] font-semibold uppercase tracking-widest">Historique des
-                        échanges</span>
-                    <div class="h-px flex-1 bg-outline-variant/30"></div>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <!-- Client Message -->
-                    <div class="flex flex-col items-end gap-1 max-w-[85%] self-end">
-                        <div
-                            class="bg-secondary-container text-on-secondary-container px-4 py-2.5 rounded-[12px] rounded-br-[4px] shadow-sm">
-                            <p class="text-[0.875rem]">Avez-vous une mise à jour sur ce dossier ?</p>
-                        </div>
-                        <span class="text-outline text-[10px]">10:24 • Aujourd'hui</span>
-                    </div>
-                    <!-- Support Message -->
-                    <div class="flex gap-3 max-w-[85%]">
-                        <img alt="Avatar Support" class="w-8 h-8 rounded-full border border-white shadow-sm self-end"
-                            data-alt="Professional portrait of a friendly customer support representative with a soft smile and professional attire"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6d-yNLfucFxFLg_N202Fl3-P-9vkBdsDD8aIWAEfVjKCpgh_txigSUusPrVVJNWZFHRkjamAKyPjOjveUMSmamS74h_WJkkk_uQAh-6yZ5yRQw6a9iVLrlsFEXEahLdlv9HjkjGmXApWcTwgJF-7nTbcKHdBX7NAAMsss-COc9K9wSNKBUZvITB-6U4orvGmSDicpRHc14GbwkdmCxh8qNxVKGDuJSQgjfTk1ZU7UoIJv9_kzEWv2tS_jl32otoAF_LXthitbXw" />
-                        <div class="flex flex-col gap-1">
-                            <span class="text-on-surface-variant text-[11px] font-semibold ml-1">Sophie de
-                                SupportKit</span>
-                            <div
-                                class="bg-surface-container-high text-on-surface px-4 py-2.5 rounded-[12px] rounded-bl-[4px] shadow-sm">
-                                <p class="text-[0.875rem]">Bonjour ! Notre équipe technique analyse actuellement les
-                                    logs de la passerelle de paiement. Je reviens vers vous d'ici 30 minutes.</p>
-                            </div>
-                            <span class="text-outline text-[10px] ml-1">10:45 • Aujourd'hui</span>
-                        </div>
-                    </div>
-                    <!-- Client Reply -->
-                    <div class="flex flex-col items-end gap-1 max-w-[85%] self-end">
-                        <div
-                            class="bg-secondary-container text-on-secondary-container px-4 py-2.5 rounded-[12px] rounded-br-[4px] shadow-sm">
-                            <p class="text-[0.875rem]">C'est noté, merci beaucoup pour votre réactivité.</p>
-                        </div>
-                        <span class="text-outline text-[10px]">10:48 • Aujourd'hui</span>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer class="p-4 bg-surface-container-lowest border-t border-surface-container-high flex flex-col gap-3">
-            <div class="relative">
-                <textarea
-                    class="w-full bg-surface-container-low border-none rounded-[12px] text-[0.875rem] p-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:italic placeholder:text-outline/60 resize-none min-h-[80px]"
-                    placeholder="Ajouter un commentaire..."></textarea>
-            </div>
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                    <button class="text-outline hover:text-primary transition-colors p-1">
-                        <span class="material-symbols-outlined">attach_file</span>
-                    </button>
-                    <button class="text-outline hover:text-primary transition-colors p-1">
-                        <span class="material-symbols-outlined">mood</span>
-                    </button>
-                </div>
-                <button
-                    class="bg-primary text-on-primary px-6 py-2 rounded-full font-semibold text-[0.875rem] hover:opacity-90 active:scale-95 transition-all shadow-md shadow-primary/20">
-                    Envoyer
-                </button>
-            </div>
-        </footer>
+  <!-- Background blur mock -->
+  <div class="fixed inset-0 z-0 overflow-hidden opacity-25 scale-105" style="filter: blur(8px);">
+    <div class="flex h-full">
+      <div class="w-64 bg-surface-container border-r border-outline-variant/10 p-6 flex flex-col gap-8">
+        <div class="h-8 w-32 bg-outline-variant/30 rounded-lg"></div>
+        <div class="space-y-4">
+          <div class="h-10 w-full bg-outline-variant/20 rounded-lg"></div>
+          <div class="h-10 w-full bg-outline-variant/20 rounded-lg"></div>
+          <div class="h-10 w-full bg-outline-variant/20 rounded-lg"></div>
+        </div>
+      </div>
+      <div class="flex-1 p-10 space-y-8">
+        <div class="flex justify-between items-center">
+          <div class="h-10 w-48 bg-outline-variant/40 rounded-lg"></div>
+          <div class="h-10 w-10 bg-outline-variant/30 rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-6">
+          <div class="col-span-2 h-64 bg-surface-container-low rounded-xl"></div>
+          <div class="space-y-4">
+            <div class="h-28 bg-surface-container-low rounded-xl"></div>
+            <div class="h-28 bg-surface-container-low rounded-xl"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Floating Action Button -->
-    <button
-        class="fixed right-6 bottom-6 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full shadow-[0_8px_24px_-4px_rgba(23,34,143,0.25)] flex items-center justify-center hover:scale-[1.05] active:scale-95 transition-all">
-        <span class="material-symbols-outlined text-[28px]" data-weight="fill">chat_bubble</span>
-    </button>
-</body>
+  </div>
 
+  <!-- Widget Panel -->
+  <div class="fixed right-6 bottom-24 w-[380px] h-[660px] glass-panel rounded-[16px] overflow-hidden shadow-[0_16px_40px_-8px_rgba(70,72,212,0.18),0_4px_12px_-2px_rgba(0,0,0,0.08)] border border-white/60 flex flex-col z-50">
+
+    <!-- Header -->
+    <header class="px-5 py-4 border-b border-outline-variant/30 shrink-0">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-gradient-brand flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-white text-[16px]" style="font-variation-settings:'FILL' 1;">smart_toy</span>
+          </div>
+          <a href="listeticket.html"
+             class="flex items-center gap-1 text-primary text-[0.8125rem] font-semibold hover:opacity-75 transition-opacity">
+            <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+            Mes tickets
+          </a>
+        </div>
+        <button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors active:scale-95">
+          <span class="material-symbols-outlined text-outline text-[20px]">close</span>
+        </button>
+      </div>
+      <div>
+        <h1 class="text-[1rem] font-semibold text-on-surface leading-tight mb-2">
+          #SK-8742 – Erreur 500 lors du paiement
+        </h1>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-tertiary-fixed text-on-tertiary-fixed-variant">
+            En cours
+          </span>
+          <span class="text-outline text-[0.6875rem]">Créé il y a 2 jours</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Scrollable Content -->
+    <main class="flex-1 overflow-y-auto custom-scrollbar bg-surface-container-lowest/50 p-4 space-y-5">
+
+      <!-- Initial description -->
+      <section class="space-y-3">
+        <p class="text-on-surface-variant text-[0.875rem] leading-relaxed">
+          Bonjour, j'ai tenté d'effectuer un achat via Apple Pay et j'ai reçu une erreur 500 juste après la validation biométrique. La transaction semble en attente sur mon compte bancaire.
+        </p>
+        <div class="rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm">
+          <img alt="Screenshot d'erreur de paiement" class="w-full h-auto object-cover"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcfoVMKMcVPH0_HArhmbtN3WUVRceQWKG2UAHb5Eh6Te6BG8tQixF4fqXVi2MkHDhglg9n7wCM1nhpuIlR2szbDmxiIIXDKeETQ8l-W1RFP_6snBI__OKiSvwlGYF03FL4UroW16ihxCB-rUOzRgUGv7OLxlAGoymMv3caNHIoZmvz5nuXmNnUgyY-ZLnENg-hph7pt5BG7rI3fdAfUboSRNlUi8ru_bZ-_c0phiWhxQl2OqsbIsm29zEi56qlK3oUxXmyJl7-ZQ" />
+        </div>
+      </section>
+
+      <!-- Separator -->
+      <div class="flex items-center gap-3">
+        <div class="h-px flex-1 bg-outline-variant/30"></div>
+        <span class="text-outline text-[10px] font-semibold uppercase tracking-widest">Historique des échanges</span>
+        <div class="h-px flex-1 bg-outline-variant/30"></div>
+      </div>
+
+      <!-- Messages -->
+      <div class="flex flex-col gap-4">
+
+        <!-- Client -->
+        <div class="flex flex-col items-end gap-1 max-w-[85%] self-end">
+          <div class="bg-secondary-container text-on-secondary-container px-4 py-2.5 rounded-[12px] rounded-br-[4px]">
+            <p class="text-[0.875rem]">Avez-vous une mise à jour sur ce dossier ?</p>
+          </div>
+          <span class="text-outline text-[10px]">10:24 · Aujourd'hui</span>
+        </div>
+
+        <!-- Support -->
+        <div class="flex gap-2.5 max-w-[85%]">
+          <img alt="Avatar Support" class="w-8 h-8 rounded-full border-2 border-white shadow-sm self-end shrink-0"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6d-yNLfucFxFLg_N202Fl3-P-9vkBdsDD8aIWAEfVjKCpgh_txigSUusPrVVJNWZFHRkjamAKyPjOjveUMSmamS74h_WJkkk_uQAh-6yZ5yRQw6a9iVLrlsFEXEahLdlv9HjkjGmXApWcTwgJF-7nTbcKHdBX7NAAMsss-COc9K9wSNKBUZvITB-6U4orvGmSDicpRHc14GbwkdmCxh8qNxVKGDuJSQgjfTk1ZU7UoIJv9_kzEWv2tS_jl32otoAF_LXthitbXw" />
+          <div class="flex flex-col gap-1">
+            <span class="text-on-surface-variant text-[11px] font-semibold ml-1">Sophie de SupportKit</span>
+            <div class="bg-surface-container-high text-on-surface px-4 py-2.5 rounded-[12px] rounded-bl-[4px]">
+              <p class="text-[0.875rem]">Bonjour ! Notre équipe technique analyse actuellement les logs de la passerelle de paiement. Je reviens vers vous d'ici 30 minutes.</p>
+            </div>
+            <span class="text-outline text-[10px] ml-1">10:45 · Aujourd'hui</span>
+          </div>
+        </div>
+
+        <!-- Client reply -->
+        <div class="flex flex-col items-end gap-1 max-w-[85%] self-end">
+          <div class="bg-secondary-container text-on-secondary-container px-4 py-2.5 rounded-[12px] rounded-br-[4px]">
+            <p class="text-[0.875rem]">C'est noté, merci beaucoup pour votre réactivité.</p>
+          </div>
+          <span class="text-outline text-[10px]">10:48 · Aujourd'hui</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Reply Footer -->
+    <footer class="px-4 py-3 border-t border-outline-variant/30 bg-white/60 shrink-0">
+      <textarea
+        class="w-full rounded-xl text-[0.875rem] px-4 py-3 placeholder:italic placeholder:text-outline/60 resize-none"
+        rows="3"
+        placeholder="Ajouter un commentaire…"></textarea>
+      <div class="flex items-center justify-between mt-2">
+        <div class="flex items-center gap-1">
+          <button class="w-8 h-8 flex items-center justify-center rounded-full text-outline hover:text-primary hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined text-[20px]">attach_file</span>
+          </button>
+          <button class="w-8 h-8 flex items-center justify-center rounded-full text-outline hover:text-primary hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined text-[20px]">mood</span>
+          </button>
+        </div>
+        <button class="bg-gradient-brand text-on-primary px-5 py-2 rounded-full font-semibold text-[0.875rem] hover:opacity-90 active:scale-95 transition-all shadow-md shadow-primary/20">
+          Envoyer
+        </button>
+      </div>
+    </footer>
+
+    <!-- Bottom Navigation -->
+    <nav class="flex border-t border-outline-variant/30 bg-white/70 px-2 shrink-0">
+      <a href="listeticket.html" class="nav-item flex-1 py-3 flex flex-col items-center gap-0.5 text-outline hover:text-primary">
+        <div class="nav-indicator"></div>
+        <span class="material-symbols-outlined text-[22px]">home</span>
+        <span class="text-[10px] font-semibold tracking-wider uppercase">Home</span>
+      </a>
+      <!-- <a href="#" class="nav-item active flex-1 py-3 flex flex-col items-center gap-0.5">
+        <div class="nav-indicator"></div>
+        <span class="material-symbols-outlined text-[22px]">chat_bubble</span>
+        <span class="text-[10px] font-semibold tracking-wider uppercase">Messages</span>
+      </a> -->
+      <a href="signalerbugue.html" class="nav-item flex-1 py-3 flex flex-col items-center gap-0.5 text-outline hover:text-primary">
+        <div class="nav-indicator"></div>
+        <span class="material-symbols-outlined text-[22px]">help</span>
+        <span class="text-[10px] font-semibold tracking-wider uppercase">Help</span>
+      </a>
+      <!-- <a href="#" class="nav-item flex-1 py-3 flex flex-col items-center gap-0.5 text-outline hover:text-primary">
+        <div class="nav-indicator"></div>
+        <span class="material-symbols-outlined text-[22px]">campaign</span>
+        <span class="text-[10px] font-semibold tracking-wider uppercase">News</span>
+      </a> -->
+    </nav>
+  </div>
+
+  <!-- FAB -->
+  <button class="fixed right-6 bottom-6 w-14 h-14 bg-gradient-brand text-white rounded-full flex items-center justify-center shadow-[0_8px_24px_-4px_rgba(70,72,212,0.35)] hover:scale-105 active:scale-95 transition-all z-[60]">
+    <span class="material-symbols-outlined text-2xl" style="font-variation-settings:'FILL' 1;">smart_toy</span>
+  </button>
+</body>
 </html>
