@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fb",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c7c4d7",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed-variant": "#2f3aa3",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "secondary-fixed": "#e0e0ff",
+                        "primary-fixed": "#e1e0ff",
+                        "surface-tint": "#494bd6",
+                        "inverse-primary": "#c0c1ff",
+                        "primary": "#4648d4",
+                        "on-surface-variant": "#464554",
+                        "outline": "#767586",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "primary-container": "#6063ee",
+                        "on-secondary-container": "#17228f",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-tertiary-container": "#000703",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-background": "#191c1e",
+                        "secondary": "#4953bc",
+                        "on-secondary-fixed": "#000767",
+                        "on-primary-container": "#fffbff",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed": "#07006c",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "background": "#f7f9fb",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary-container": "#00885d",
+                        "tertiary": "#006c49",
+                        "secondary-container": "#8792fe",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-container": "#eceef0",
+                        "surface-dim": "#d8dadc",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #4648d4 0%, #6063ee 100%);
+        }
+        body {
+            background-color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+<!-- Host Website Simulation Background -->
+<div class="fixed inset-0 z-0">
+<img class="w-full h-full object-cover filter blur-sm brightness-95" data-alt="Modern minimalist office space with clean white desks, large windows with soft daylight, and professional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsD3Q3zg8Pc8UpvO7rzCRTdrmrj4v1mrPrCMshdXvC5uo-nYSFGECgmlk_LcJTth1CtaaupG-WL5Lz8HNKzJFnGLkthedRiRmEr7mL-YGFLBkZSqCmGgSEgo5y27-aMiExb4BuUWR-8qcxMeXGvExgPTOLdogDK2sphM1Ki0QCq0inDkBP8vCBiMffcXAUVtNxfy_8Wg_Yl4lRL3qQSeFpUzkxVBjO_2wFursPgDpiTy3Pim07qMXGWHTxd0srHuKThEgSDy3LDA"/>
+</div>
+<!-- SupportKit SideNavBar (Widget Panel) -->
+<aside class="fixed right-6 bottom-24 w-[380px] h-[720px] rounded-[12px] overflow-hidden bg-white/85 dark:bg-slate-950/85 backdrop-blur-md shadow-[0_8px_24px_-4px_rgba(23,34,143,0.06)] flex flex-col z-50 border border-white/20">
+<!-- Header: Managed via JSON TopAppBar Logic for the Panel -->
+<header class="bg-slate-100 dark:bg-slate-900/50 px-4 py-6 flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<h1 class="text-[1.125rem] font-medium text-slate-900 dark:text-slate-100 leading-relaxed font-['Inter']">Mes tickets</h1>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-colors active:scale-95">
+<span class="material-symbols-outlined text-slate-500" data-icon="close">close</span>
+</button>
+</div>
+<p class="text-[0.875rem] font-normal text-on-surface-variant font-['Inter']">Suivez l’état de vos demandes (4 tickets)</p>
+</header>
+<!-- Filter Chips Section -->
+<div class="px-4 py-4 flex gap-2 overflow-x-auto no-scrollbar">
+<button class="px-4 py-1.5 rounded-full bg-primary text-white text-[0.6875rem] font-semibold uppercase tracking-wider whitespace-nowrap">Tous</button>
+<button class="px-4 py-1.5 rounded-full bg-secondary-container/20 text-on-secondary-container text-[0.6875rem] font-semibold uppercase tracking-wider whitespace-nowrap border border-secondary-container/10">Ouverts</button>
+<button class="px-4 py-1.5 rounded-full bg-secondary-container/20 text-on-secondary-container text-[0.6875rem] font-semibold uppercase tracking-wider whitespace-nowrap border border-secondary-container/10">En cours</button>
+<button class="px-4 py-1.5 rounded-full bg-secondary-container/20 text-on-secondary-container text-[0.6875rem] font-semibold uppercase tracking-wider whitespace-nowrap border border-secondary-container/10">Résolus</button>
+</div>
+<!-- Ticket List: Tonal Layering Principles -->
+<div class="flex-1 overflow-y-auto px-4 pb-6 space-y-4 bg-slate-50/50">
+<!-- Ticket 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-[12px] shadow-[0_2px_8px_-2px_rgba(23,34,143,0.04)] hover:scale-[1.02] transition-transform duration-300">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[0.6875rem] font-semibold text-outline tracking-wider uppercase">#SK-8742</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[0.6875rem] font-bold">En cours</span>
+</div>
+<h3 class="text-[0.875rem] font-medium text-on-surface mb-3">Erreur 500 lors du paiement</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-0.5 rounded-sm bg-slate-100 text-slate-600 text-[0.625rem] font-bold uppercase">Auto</span>
+<span class="px-2 py-0.5 rounded-sm bg-error-container/50 text-error text-[0.625rem] font-bold uppercase">Haute</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[0.6875rem] text-outline italic font-['Inter']">Il y a 2h</span>
+<button class="text-primary text-[0.75rem] font-semibold hover:underline">Voir le détail</button>
+</div>
+</div>
+<!-- Ticket 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-[12px] shadow-[0_2px_8px_-2px_rgba(23,34,143,0.04)] hover:scale-[1.02] transition-transform duration-300">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[0.6875rem] font-semibold text-outline tracking-wider uppercase">#SK-8739</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[0.6875rem] font-bold">Ouvert</span>
+</div>
+<h3 class="text-[0.875rem] font-medium text-on-surface mb-3">Demande d’amélioration sur le formulaire</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-0.5 rounded-sm bg-slate-100 text-slate-600 text-[0.625rem] font-bold uppercase">Manuel</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[0.6875rem] text-outline italic">Hier</span>
+<button class="text-primary text-[0.75rem] font-semibold hover:underline">Voir le détail</button>
+</div>
+</div>
+<!-- Ticket 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-[12px] shadow-[0_2px_8px_-2px_rgba(23,34,143,0.04)] hover:scale-[1.02] transition-transform duration-300 opacity-80">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[0.6875rem] font-semibold text-outline tracking-wider uppercase">#SK-8735</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant text-[0.6875rem] font-bold">Résolu</span>
+</div>
+<h3 class="text-[0.875rem] font-medium text-on-surface mb-3">Problème de connexion</h3>
+<div class="flex justify-between items-center">
+<span class="text-[0.6875rem] text-outline italic">Il y a 3 jours</span>
+<button class="text-primary text-[0.75rem] font-semibold hover:underline">Voir le détail</button>
+</div>
+</div>
+<!-- Ticket 4 -->
+<div class="bg-surface-container-lowest p-4 rounded-[12px] shadow-[0_2px_8px_-2px_rgba(23,34,143,0.04)] hover:scale-[1.02] transition-transform duration-300">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[0.6875rem] font-semibold text-outline tracking-wider uppercase">#SK-8728</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[0.6875rem] font-bold">En cours</span>
+</div>
+<h3 class="text-[0.875rem] font-medium text-on-surface mb-3">Question sur les tarifs</h3>
+<div class="flex justify-between items-center">
+<span class="text-[0.6875rem] text-outline italic">Il y a 1 semaine</span>
+<button class="text-primary text-[0.75rem] font-semibold hover:underline">Voir le détail</button>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (The Anchor) -->
+<nav class="bg-white/95 dark:bg-slate-950/95 px-6 py-4 flex justify-between items-center border-t border-slate-100 dark:border-slate-800">
+<button class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 group">
+<span class="material-symbols-outlined group-hover:text-indigo-500 transition-all" data-icon="home">home</span>
+<span class="text-[0.6875rem] font-semibold uppercase tracking-wider">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-[0.6875rem] font-semibold uppercase tracking-wider">Messages</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 group">
+<span class="material-symbols-outlined group-hover:text-indigo-500 transition-all" data-icon="help">help</span>
+<span class="text-[0.6875rem] font-semibold uppercase tracking-wider">Help</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 group">
+<span class="material-symbols-outlined group-hover:text-indigo-500 transition-all" data-icon="campaign">campaign</span>
+<span class="text-[0.6875rem] font-semibold uppercase tracking-wider">News</span>
+</button>
+</nav>
+</aside>
+<!-- Floating Action Button (FAB) -->
+<button class="fixed right-6 bottom-6 w-14 h-14 rounded-full bg-gradient-primary flex items-center justify-center shadow-[0_8px_24px_-4px_rgba(23,34,143,0.3)] active:scale-95 transition-all z-50 group">
+<span class="material-symbols-outlined text-white text-2xl group-hover:scale-110 transition-transform" data-icon="message" style="font-variation-settings: 'FILL' 1;">message</span>
+</button>
+</body></html>
