@@ -1,343 +1,412 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Satoshi:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-tertiary-container": "#452000",
-                    "on-surface": "#dae2fd",
-                    "on-primary-container": "#0d0096",
-                    "surface-dim": "#0b1326",
-                    "surface-container-low": "#131b2e",
-                    "on-tertiary-fixed": "#301400",
-                    "surface-variant": "#2d3449",
-                    "on-primary-fixed": "#07006c",
-                    "primary-fixed": "#e1e0ff",
-                    "on-secondary-container": "#00311f",
-                    "error-container": "#93000a",
-                    "on-secondary-fixed": "#002113",
-                    "surface-container-highest": "#2d3449",
-                    "inverse-primary": "#494bd6",
-                    "primary-fixed-dim": "#c0c1ff",
-                    "surface-container-lowest": "#060e20",
-                    "on-surface-variant": "#c7c4d7",
-                    "tertiary": "#ffb783",
-                    "surface-tint": "#c0c1ff",
-                    "on-secondary": "#003824",
-                    "on-primary-fixed-variant": "#2f2ebe",
-                    "surface-container-high": "#222a3d",
-                    "primary": "#c0c1ff",
-                    "tertiary-container": "#d97721",
-                    "tertiary-fixed": "#ffdcc5",
-                    "secondary-fixed": "#6ffbbe",
-                    "inverse-on-surface": "#283044",
-                    "inverse-surface": "#dae2fd",
-                    "surface": "#0b1326",
-                    "on-tertiary": "#4f2500",
-                    "on-error": "#690005",
-                    "on-background": "#dae2fd",
-                    "outline-variant": "#464554",
-                    "surface-bright": "#31394d",
-                    "on-error-container": "#ffdad6",
-                    "secondary-container": "#00a572",
-                    "surface-container": "#171f33",
-                    "secondary-fixed-dim": "#4edea3",
-                    "background": "#0b1326",
-                    "on-primary": "#1000a9",
-                    "outline": "#908fa0",
-                    "error": "#ffb4ab",
-                    "tertiary-fixed-dim": "#ffb783",
-                    "primary-container": "#8083ff",
-                    "on-secondary-fixed-variant": "#005236",
-                    "on-tertiary-fixed-variant": "#703700",
-                    "secondary": "#4edea3"
-            },
-            "fontFamily": {
-                    "headline": ["Inter", "sans-serif"],
-                    "body": ["Satoshi", "sans-serif"],
-                    "label": ["Satoshi", "sans-serif"]
-            }
+<html class="dark" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Satoshi:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#452000",
+            "on-surface": "#dae2fd",
+            "on-primary-container": "#0d0096",
+            "surface-dim": "#0b1326",
+            "surface-container-low": "#131b2e",
+            "on-tertiary-fixed": "#301400",
+            "surface-variant": "#2d3449",
+            "on-primary-fixed": "#07006c",
+            "primary-fixed": "#e1e0ff",
+            "on-secondary-container": "#00311f",
+            "error-container": "#93000a",
+            "on-secondary-fixed": "#002113",
+            "surface-container-highest": "#2d3449",
+            "inverse-primary": "#494bd6",
+            "primary-fixed-dim": "#c0c1ff",
+            "surface-container-lowest": "#060e20",
+            "on-surface-variant": "#c7c4d7",
+            "tertiary": "#ffb783",
+            "surface-tint": "#c0c1ff",
+            "on-secondary": "#003824",
+            "on-primary-fixed-variant": "#2f2ebe",
+            "surface-container-high": "#222a3d",
+            "primary": "#c0c1ff",
+            "tertiary-container": "#d97721",
+            "tertiary-fixed": "#ffdcc5",
+            "secondary-fixed": "#6ffbbe",
+            "inverse-on-surface": "#283044",
+            "inverse-surface": "#dae2fd",
+            "surface": "#0b1326",
+            "on-tertiary": "#4f2500",
+            "on-error": "#690005",
+            "on-background": "#dae2fd",
+            "outline-variant": "#464554",
+            "surface-bright": "#31394d",
+            "on-error-container": "#ffdad6",
+            "secondary-container": "#00a572",
+            "surface-container": "#171f33",
+            "secondary-fixed-dim": "#4edea3",
+            "background": "#0b1326",
+            "on-primary": "#1000a9",
+            "outline": "#908fa0",
+            "error": "#ffb4ab",
+            "tertiary-fixed-dim": "#ffb783",
+            "primary-container": "#8083ff",
+            "on-secondary-fixed-variant": "#005236",
+            "on-tertiary-fixed-variant": "#703700",
+            "secondary": "#4edea3"
           },
+          "fontFamily": {
+            "headline": ["Inter", "sans-serif"],
+            "body": ["Satoshi", "sans-serif"],
+            "label": ["Satoshi", "sans-serif"]
+          }
         },
-      }
-    </script>
-<style>
-        body { font-family: 'Satoshi', sans-serif; }
-        h1, h2, h3, h4 { font-family: 'Inter', sans-serif; }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Satoshi', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
 </head>
+
 <body class="bg-surface text-on-surface selection:bg-primary/30">
-<!-- SideNavBar (Permanent Shell) -->
-<aside class="fixed left-0 top-0 h-full w-[280px] bg-[#171f33] shadow-2xl shadow-indigo-950/20 flex flex-col py-8 px-6 z-50">
-<div class="flex items-center gap-3 mb-12">
-<div class="w-10 h-10 bg-gradient-to-br from-primary to-primary-container rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
-<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
-</div>
-<div>
-<h1 class="text-xl font-bold tracking-tight text-white">SupportKit</h1>
-<p class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold">Dashboard</p>
-</div>
-</div>
-<nav class="flex-1 space-y-2">
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="#">
-<span class="material-symbols-outlined">dashboard</span>
-<span class="font-medium">Tableau de bord</span>
-</a>
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-white font-bold border-r-2 border-[#6366F1] bg-[#222a3d]/50" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
-<span class="font-medium">Tickets</span>
-</a>
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="#">
-<span class="material-symbols-outlined">folder</span>
-<span class="font-medium">Projets</span>
-</a>
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="#">
-<span class="material-symbols-outlined">group</span>
-<span class="font-medium">Clients</span>
-</a>
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="#">
-<span class="material-symbols-outlined">person</span>
-<span class="font-medium">Membres</span>
-</a>
-</nav>
-<div class="mt-auto space-y-2">
-<button class="w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/10 hover:scale-[0.98] active:scale-95 transition-all mb-6">
-                + Nouveau ticket
+  <!-- SideNavBar (Permanent Shell) -->
+  <aside
+    class="fixed left-0 top-0 h-full w-[280px] bg-[#171f33] shadow-2xl shadow-indigo-950/20 flex flex-col py-8 px-6 z-50">
+    <div class="flex items-center gap-3 mb-12">
+      <div
+        class="w-10 h-10 bg-gradient-to-br from-primary to-primary-container rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+        <span class="material-symbols-outlined text-on-primary-container"
+          style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold tracking-tight text-white">SupportKit</h1>
+        <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold">Dashboard</p>
+      </div>
+    </div>
+    <nav class="flex-1 space-y-2">
+      <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+        href="dashboard.html">
+        <span class="material-symbols-outlined">dashboard</span>
+        <span class="font-medium">Tableau de bord</span>
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-white font-bold border-r-2 border-[#6366F1] bg-[#222a3d]/50"
+        href="listedestickets.html">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+        <span class="font-medium">Tickets</span>
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+        href="listeprojet.html">
+        <span class="material-symbols-outlined">folder</span>
+        <span class="font-medium">Projets</span>
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+        href="listesdesclients.html">
+        <span class="material-symbols-outlined">group</span>
+        <span class="font-medium">Clients</span>
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+        href="gestionmembres.html">
+        <span class="material-symbols-outlined">person</span>
+        <span class="font-medium">Membres</span>
+      </a>
+    </nav>
+    <div class="mt-auto space-y-2">
+      <button
+        class="w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/10 hover:scale-[0.98] active:scale-95 transition-all mb-6">
+        <a href="ajoutprojet.html">+ Nouveau projet</a>
+      </button>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+        href="notification.html">
+        <span class="material-symbols-outlined">notifications</span>
+        <span class="font-medium">Notifications</span>
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+        href="parametre.html">
+        <span class="material-symbols-outlined">settings</span>
+        <span class="font-medium">Paramètres</span>
+      </a>
+    </div>
+  </aside>
+  <!-- Main Content Wrapper -->
+  <div class="ml-[280px] min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 right-0 w-[calc(100%-280px)] z-40 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10">
+      <div class="flex items-center gap-6 w-1/2">
+        <div class="relative w-full max-w-md">
+          <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+          <input
+            class="w-full bg-surface-container-high/40 border-none rounded-full py-2.5 pl-11 pr-4 text-sm focus:ring-1 focus:ring-primary/50 placeholder:text-slate-500 transition-all"
+            placeholder="Rechercher un ticket..." type="text" />
+        </div>
+      </div>
+      <div class="flex items-center gap-6">
+        <button class="text-slate-400 hover:bg-white/5 p-2 rounded-full transition-all">
+          <span class="material-symbols-outlined">notifications</span>
+        </button>
+        <div class="flex items-center gap-3 pl-4 border-l border-white/10">
+          <div class="text-right">
+            <p class="text-xs font-bold text-white leading-none">Admin Avatar</p>
+            <p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Superviseur</p>
+          </div>
+          <img class="w-10 h-10 rounded-full border-2 border-primary/20 object-cover"
+            data-alt="portrait of a professional male software engineer with a friendly expression in a modern office setting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5REy_Sv0t68KmOhxoD7h7R0zIQ65AInQiCQK5ZzAJugSLzFGsxIvXXcVqO75NEyZ0vXyh9T5OcFLiq_HWnQ7gZSxC1AZ7RXPXwKT5Rg6DanMTPdrXgnzwQhKcrHeHl_Jg-279hlQFALrZ6xFPElBDVzJA-ihO0zt1IP0XhW5V_sxyoyp5C02W7W3dJrHCG4ijHfIR6ODsaniasvUNjgjj7FwyLc3R4L_CvLgpaBejyZcYcuETCjgY38ZbNEEejAOf7p-hZvEZ_Pc" />
+        </div>
+      </div>
+    </header>
+    <!-- Ticket Detail Content -->
+    <main class="mt-20 p-10 flex gap-10">
+      <!-- Left Column: Content Canvas -->
+      <div class="flex-1 space-y-10">
+        <!-- Ticket Header Section -->
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-4 text-sm text-slate-400 font-medium">
+            <span class="px-2 py-0.5 bg-surface-container-high rounded text-xs text-primary font-bold">#SK-8742</span>
+            <span class="material-symbols-outlined text-xs">chevron_right</span>
+            <span>Projets</span>
+            <span class="material-symbols-outlined text-xs">chevron_right</span>
+            <span>Support Technique</span>
+          </div>
+          <div class="flex justify-between items-start">
+            <h2 class="text-3xl font-extrabold text-white tracking-tight max-w-2xl leading-tight">Erreur de rendu sur le
+              dashboard client lors de l'export PDF</h2>
+            <div class="flex items-center gap-2">
+              <div class="relative group">
+                <button
+                  class="flex items-center gap-2 bg-secondary-container/20 text-secondary px-4 py-2 rounded-lg font-bold text-sm border border-secondary/20 hover:bg-secondary-container/30 transition-all">
+                  <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  En cours
+                  <span class="material-symbols-outlined text-sm">expand_more</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Content Area -->
+        <div class="grid grid-cols-1 gap-8">
+          <!-- Description Card -->
+          <section class="bg-surface-container-low rounded-3xl p-8 space-y-6">
+            <div class="flex items-center gap-3 text-slate-400">
+              <span class="material-symbols-outlined">subject</span>
+              <h3 class="text-sm font-bold uppercase tracking-widest">Description détaillée</h3>
+            </div>
+            <div class="text-on-surface-variant leading-relaxed space-y-4 font-medium">
+              <p>Le client rapporte qu'à chaque tentative d'exportation du "Rapport Mensuel de Performance" en format
+                PDF, les graphiques de type 'Heatmap' ne s'affichent pas correctement. Ils apparaissent comme des blocs
+                gris vides.</p>
+              <p>Ce problème semble spécifique aux navigateurs basés sur Chromium (v112+) et ne se produit pas sur
+                Firefox. L'erreur console indique un problème de chargement de blob SVG lors de l'initialisation de la
+                librairie de rendu PDF.</p>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img class="w-full aspect-video object-cover"
+                data-alt="screenshot of a dark themed software dashboard showing broken data visualization components with red error overlays"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuATyftbQmmPQduMMjZ9dnxp3kGP7X0R5x0hBte0QMJmLxoWh2Y1E8PkJiNjXfc2TD0NrsHdmvPcjOhNmtXYIO7Sl5QD78qIm0N0NCnLfeZ--XnptWR-_jvEQOBj7pC9e3nVjwHQssJ3vyjyCa3-lp--Jl_5n2Bmu5oSCsoP8uyh7m72wwN4v9Sx7DYraZCyeS_OhcR4AlR4wSs5iOqu9l0jdsCzOIoJZo_GepdPRRkpDhO7CtoFSjS8LQNxeBIzwbrwtC7FJoz-88E" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <button
+                  class="flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-xl text-sm font-bold">
+                  <span class="material-symbols-outlined text-sm">zoom_in</span>
+                  Agrandir la capture d'écran
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- Interaction Buttons -->
+          <div class="flex items-center gap-4">
+            <button
+              class="flex items-center gap-2 bg-gradient-to-r from-primary to-primary-container text-on-primary-container px-6 py-3 rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform">
+              <span class="material-symbols-outlined">add_comment</span>
+              Ajouter un commentaire
             </button>
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="#">
-<span class="material-symbols-outlined">notifications</span>
-<span class="font-medium">Notifications</span>
-</a>
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="#">
-<span class="material-symbols-outlined">settings</span>
-<span class="font-medium">Paramètres</span>
-</a>
-</div>
-</aside>
-<!-- Main Content Wrapper -->
-<div class="ml-[280px] min-h-screen flex flex-col">
-<!-- TopNavBar -->
-<header class="fixed top-0 right-0 w-[calc(100%-280px)] z-40 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10">
-<div class="flex items-center gap-6 w-1/2">
-<div class="relative w-full max-w-md">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
-<input class="w-full bg-surface-container-high/40 border-none rounded-full py-2.5 pl-11 pr-4 text-sm focus:ring-1 focus:ring-primary/50 placeholder:text-slate-500 transition-all" placeholder="Rechercher un ticket..." type="text"/>
-</div>
-</div>
-<div class="flex items-center gap-6">
-<button class="text-slate-400 hover:bg-white/5 p-2 rounded-full transition-all">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<div class="flex items-center gap-3 pl-4 border-l border-white/10">
-<div class="text-right">
-<p class="text-xs font-bold text-white leading-none">Admin Avatar</p>
-<p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Superviseur</p>
-</div>
-<img class="w-10 h-10 rounded-full border-2 border-primary/20 object-cover" data-alt="portrait of a professional male software engineer with a friendly expression in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5REy_Sv0t68KmOhxoD7h7R0zIQ65AInQiCQK5ZzAJugSLzFGsxIvXXcVqO75NEyZ0vXyh9T5OcFLiq_HWnQ7gZSxC1AZ7RXPXwKT5Rg6DanMTPdrXgnzwQhKcrHeHl_Jg-279hlQFALrZ6xFPElBDVzJA-ihO0zt1IP0XhW5V_sxyoyp5C02W7W3dJrHCG4ijHfIR6ODsaniasvUNjgjj7FwyLc3R4L_CvLgpaBejyZcYcuETCjgY38ZbNEEejAOf7p-hZvEZ_Pc"/>
-</div>
-</div>
-</header>
-<!-- Ticket Detail Content -->
-<main class="mt-20 p-10 flex gap-10">
-<!-- Left Column: Content Canvas -->
-<div class="flex-1 space-y-10">
-<!-- Ticket Header Section -->
-<div class="flex flex-col gap-4">
-<div class="flex items-center gap-4 text-sm text-slate-400 font-medium">
-<span class="px-2 py-0.5 bg-surface-container-high rounded text-xs text-primary font-bold">#SK-8742</span>
-<span class="material-symbols-outlined text-xs">chevron_right</span>
-<span>Projets</span>
-<span class="material-symbols-outlined text-xs">chevron_right</span>
-<span>Support Technique</span>
-</div>
-<div class="flex justify-between items-start">
-<h2 class="text-3xl font-extrabold text-white tracking-tight max-w-2xl leading-tight">Erreur de rendu sur le dashboard client lors de l'export PDF</h2>
-<div class="flex items-center gap-2">
-<div class="relative group">
-<button class="flex items-center gap-2 bg-secondary-container/20 text-secondary px-4 py-2 rounded-lg font-bold text-sm border border-secondary/20 hover:bg-secondary-container/30 transition-all">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-                                    En cours
-                                    <span class="material-symbols-outlined text-sm">expand_more</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Content Area -->
-<div class="grid grid-cols-1 gap-8">
-<!-- Description Card -->
-<section class="bg-surface-container-low rounded-3xl p-8 space-y-6">
-<div class="flex items-center gap-3 text-slate-400">
-<span class="material-symbols-outlined">subject</span>
-<h3 class="text-sm font-bold uppercase tracking-widest">Description détaillée</h3>
-</div>
-<div class="text-on-surface-variant leading-relaxed space-y-4 font-medium">
-<p>Le client rapporte qu'à chaque tentative d'exportation du "Rapport Mensuel de Performance" en format PDF, les graphiques de type 'Heatmap' ne s'affichent pas correctement. Ils apparaissent comme des blocs gris vides.</p>
-<p>Ce problème semble spécifique aux navigateurs basés sur Chromium (v112+) et ne se produit pas sur Firefox. L'erreur console indique un problème de chargement de blob SVG lors de l'initialisation de la librairie de rendu PDF.</p>
-</div>
-<div class="relative rounded-2xl overflow-hidden group">
-<img class="w-full aspect-video object-cover" data-alt="screenshot of a dark themed software dashboard showing broken data visualization components with red error overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATyftbQmmPQduMMjZ9dnxp3kGP7X0R5x0hBte0QMJmLxoWh2Y1E8PkJiNjXfc2TD0NrsHdmvPcjOhNmtXYIO7Sl5QD78qIm0N0NCnLfeZ--XnptWR-_jvEQOBj7pC9e3nVjwHQssJ3vyjyCa3-lp--Jl_5n2Bmu5oSCsoP8uyh7m72wwN4v9Sx7DYraZCyeS_OhcR4AlR4wSs5iOqu9l0jdsCzOIoJZo_GepdPRRkpDhO7CtoFSjS8LQNxeBIzwbrwtC7FJoz-88E"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-<button class="flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-xl text-sm font-bold">
-<span class="material-symbols-outlined text-sm">zoom_in</span>
-                                    Agrandir la capture d'écran
-                                </button>
-</div>
-</div>
-</section>
-<!-- Interaction Buttons -->
-<div class="flex items-center gap-4">
-<button class="flex items-center gap-2 bg-gradient-to-r from-primary to-primary-container text-on-primary-container px-6 py-3 rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform">
-<span class="material-symbols-outlined">add_comment</span>
-                            Ajouter un commentaire
-                        </button>
-<button class="flex items-center gap-2 bg-surface-container-high text-on-surface px-6 py-3 rounded-xl font-bold border border-white/5 hover:bg-surface-bright transition-all">
-<span class="material-symbols-outlined text-secondary">check_circle</span>
-                            Marquer comme résolu
-                        </button>
-<button class="flex items-center gap-2 text-error/80 px-4 py-3 rounded-xl font-bold hover:bg-error/10 transition-all ml-auto">
-<span class="material-symbols-outlined text-sm">delete</span>
-                            Supprimer
-                        </button>
-</div>
-<!-- Timeline/Comments -->
-<section class="space-y-8">
-<div class="flex items-center gap-3 text-slate-400">
-<span class="material-symbols-outlined">history</span>
-<h3 class="text-sm font-bold uppercase tracking-widest">Historique des échanges</h3>
-</div>
-<div class="relative space-y-10 pl-10 before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/30">
-<!-- Comment 1 -->
-<div class="relative">
-<div class="absolute -left-10 top-0 w-10 h-10 rounded-full border-4 border-surface bg-surface-container-highest z-10 flex items-center justify-center">
-<img class="w-full h-full rounded-full object-cover" data-alt="portrait of a professional woman with glasses smiling, tech support specialist style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9UelLFjssa1BOV0zJd0tE-QWxLr9mbubWhljt3p4eu31qfMp8vXme2jg3s2xXoNxLiRxYAW3lUqchJzOyiCQmHWAHCxsV5EnkZbPUezOIeLWqQSK3DA_yLwCcBzg3nUCPsfkb41v3OIe0AmKeOG2Z5W-k_WrUTbTwda_rN_uIWC0AI8G5lCHIDa5RhNfbDfeqtjMVpvTD7BtMB_cUIGhGCQtsFjmdJ4cRDDZ9sQRWe026Ong7dzCWHt1oH2q5vsJU-CYDfh90Ksk"/>
-</div>
-<div class="bg-surface-container-high/40 p-6 rounded-2xl border border-white/5">
-<div class="flex justify-between items-center mb-4">
-<span class="font-bold text-white">Sophie Martin <span class="text-xs font-medium text-slate-500 ml-2">Support Niveaux 2</span></span>
-<span class="text-xs text-slate-500">Il y a 2 heures</span>
-</div>
-<p class="text-on-surface-variant text-sm leading-relaxed">J'ai analysé les logs. Il semble que le worker de génération PDF manque de mémoire sur les gros datasets. J'ai augmenté la limite de heap à 512MB pour tester.</p>
-</div>
-</div>
-<!-- Comment 2 -->
-<div class="relative">
-<div class="absolute -left-10 top-0 w-10 h-10 rounded-full border-4 border-surface bg-surface-container-highest z-10 flex items-center justify-center">
-<img class="w-full h-full rounded-full object-cover" data-alt="professional middle-aged man in a suit, enterprise client profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYTaZG0PtjJb135sOD9q7U4iqKY3IFO24fqgI-KyM9Fha8bZkK5AfQAIPlp7vLwPiV_8io7PHMOUPT3VGqnDprRvLZuRwmjnNzZDkx0_vSAUkCqidS57ms8yvXVJb2QdRyGofyhQvNCMguIn3u6-uDO7a9EvmKHpX943TlzNQBnzzBNAvilzvWLyjUuT_IfxjJrL9x7OT5DE5pDLadGdke8cXgpQyMngm6dXPSHje1DT5QXtBkCqLxcFZ5Buy9PpVSZKgAoRNSPW4"/>
-</div>
-<div class="bg-surface-container-high/40 p-6 rounded-2xl border border-white/5">
-<div class="flex justify-between items-center mb-4">
-<span class="font-bold text-white">Jean Dupont <span class="text-xs font-medium text-slate-500 ml-2">Client (Nexus Corp)</span></span>
-<span class="text-xs text-slate-500">Hier à 16:45</span>
-</div>
-<p class="text-on-surface-variant text-sm leading-relaxed">Merci pour votre retour. Nous attendons la validation de notre équipe QA pour confirmer que le fix fonctionne sur notre environnement de staging.</p>
-</div>
-</div>
-</div>
-</section>
-</div>
-</div>
-<!-- Right Column: Sidebar -->
-<aside class="w-[320px] space-y-6">
-<!-- Assignation Card -->
-<div class="bg-surface-container-low rounded-3xl p-6 space-y-6">
-<div>
-<h4 class="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-4">Assigné à</h4>
-<div class="flex items-center justify-between group cursor-pointer hover:bg-white/5 p-2 rounded-xl transition-all">
-<div class="flex items-center gap-3">
-<img class="w-8 h-8 rounded-full object-cover" data-alt="portrait of a focused young man, dev-ops engineer profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv0k54Pts3fvgE7eTlT8agLl3qMA0n6BjsaZP5c08iiZCFMkcE5P8ufIv_9-wNzN_C0Hi-SXlrvRVhrkD-8E-9GU-BlEPyKr_00YPnzJBb1WlcaQf7tXXRjQXmrg-z7EZj4bDvnY6QThXCjukiN7KbtW829pIZpdA7tsQ0mtk7iTqnJt0UX7751iyTWA5fj7TLzqWkZ-rPDvqiazF44dcFm01Vp-bBy03Bew9wFTt8OzYEqLPwivbb6pCv4943eBo2gVwBrAHnGHg"/>
-<div>
-<p class="text-sm font-bold text-white">Marc Lefebvre</p>
-<p class="text-[10px] text-slate-500">Lead Developer</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-slate-500 text-sm">expand_more</span>
-</div>
-</div>
-<div class="pt-6 border-t border-white/5 space-y-5">
-<div class="flex justify-between items-center">
-<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Priorité</span>
-<span class="flex items-center gap-2 bg-error/10 text-error px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
-<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
-                                Haute
-                            </span>
-</div>
-<div class="flex justify-between items-center">
-<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Projet</span>
-<span class="text-xs font-bold text-white">Core UI Dashboard</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Client</span>
-<span class="text-xs font-bold text-primary">Nexus Corp.</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Type</span>
-<span class="flex items-center gap-1.5 text-xs font-bold text-white">
-<span class="material-symbols-outlined text-sm text-tertiary">bug_report</span>
-                                Bug Critique
-                            </span>
-</div>
-</div>
-</div>
-<!-- SLA & Meta Card -->
-<div class="bg-surface-container-low rounded-3xl p-6 space-y-4">
-<h4 class="text-[10px] uppercase tracking-widest font-bold text-slate-500">SLA &amp; Délais</h4>
-<div class="space-y-4">
-<div class="bg-surface-dim/50 p-4 rounded-2xl space-y-2">
-<div class="flex justify-between items-center text-xs">
-<span class="text-slate-400">Temps de réponse</span>
-<span class="text-secondary font-bold">Respecté (12m)</span>
-</div>
-<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="w-full h-full bg-secondary"></div>
-</div>
-</div>
-<div class="bg-surface-dim/50 p-4 rounded-2xl space-y-2">
-<div class="flex justify-between items-center text-xs">
-<span class="text-slate-400">Résolution prévue</span>
-<span class="text-tertiary font-bold">Dans 4h 30m</span>
-</div>
-<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="w-[65%] h-full bg-tertiary"></div>
-</div>
-</div>
-</div>
-</div>
-<!-- Shared Files -->
-<div class="bg-surface-container-low rounded-3xl p-6 space-y-4">
-<h4 class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Fichiers joints</h4>
-<div class="space-y-3">
-<div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all cursor-pointer">
-<span class="material-symbols-outlined text-primary">description</span>
-<div class="flex-1 overflow-hidden">
-<p class="text-xs font-bold text-white truncate">error_logs_nexus.txt</p>
-<p class="text-[10px] text-slate-500">12.4 KB</p>
-</div>
-<span class="material-symbols-outlined text-slate-500 text-sm">download</span>
-</div>
-<div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all cursor-pointer">
-<span class="material-symbols-outlined text-primary">image</span>
-<div class="flex-1 overflow-hidden">
-<p class="text-xs font-bold text-white truncate">ui_glitch_v1.png</p>
-<p class="text-[10px] text-slate-500">2.1 MB</p>
-</div>
-<span class="material-symbols-outlined text-slate-500 text-sm">download</span>
-</div>
-</div>
-</div>
-</aside>
-</main>
-</div>
-</body></html>
+            <button
+              class="flex items-center gap-2 bg-surface-container-high text-on-surface px-6 py-3 rounded-xl font-bold border border-white/5 hover:bg-surface-bright transition-all">
+              <span class="material-symbols-outlined text-secondary">check_circle</span>
+              Marquer comme résolu
+            </button>
+            <button
+              class="flex items-center gap-2 text-error/80 px-4 py-3 rounded-xl font-bold hover:bg-error/10 transition-all ml-auto">
+              <span class="material-symbols-outlined text-sm">delete</span>
+              Supprimer
+            </button>
+          </div>
+          <!-- Timeline/Comments -->
+          <section class="space-y-8">
+            <div class="flex items-center gap-3 text-slate-400">
+              <span class="material-symbols-outlined">history</span>
+              <h3 class="text-sm font-bold uppercase tracking-widest">Historique des échanges</h3>
+            </div>
+            <div
+              class="relative space-y-10 pl-10 before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/30">
+              <!-- Comment 1 -->
+              <div class="relative">
+                <div
+                  class="absolute -left-10 top-0 w-10 h-10 rounded-full border-4 border-surface bg-surface-container-highest z-10 flex items-center justify-center">
+                  <img class="w-full h-full rounded-full object-cover"
+                    data-alt="portrait of a professional woman with glasses smiling, tech support specialist style"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9UelLFjssa1BOV0zJd0tE-QWxLr9mbubWhljt3p4eu31qfMp8vXme2jg3s2xXoNxLiRxYAW3lUqchJzOyiCQmHWAHCxsV5EnkZbPUezOIeLWqQSK3DA_yLwCcBzg3nUCPsfkb41v3OIe0AmKeOG2Z5W-k_WrUTbTwda_rN_uIWC0AI8G5lCHIDa5RhNfbDfeqtjMVpvTD7BtMB_cUIGhGCQtsFjmdJ4cRDDZ9sQRWe026Ong7dzCWHt1oH2q5vsJU-CYDfh90Ksk" />
+                </div>
+                <div class="bg-surface-container-high/40 p-6 rounded-2xl border border-white/5">
+                  <div class="flex justify-between items-center mb-4">
+                    <span class="font-bold text-white">Sophie Martin <span
+                        class="text-xs font-medium text-slate-500 ml-2">Support Niveaux 2</span></span>
+                    <span class="text-xs text-slate-500">Il y a 2 heures</span>
+                  </div>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">J'ai analysé les logs. Il semble que le
+                    worker de génération PDF manque de mémoire sur les gros datasets. J'ai augmenté la limite de heap à
+                    512MB pour tester.</p>
+                </div>
+              </div>
+              <!-- Comment 2 -->
+              <div class="relative">
+                <div
+                  class="absolute -left-10 top-0 w-10 h-10 rounded-full border-4 border-surface bg-surface-container-highest z-10 flex items-center justify-center">
+                  <img class="w-full h-full rounded-full object-cover"
+                    data-alt="professional middle-aged man in a suit, enterprise client profile"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYTaZG0PtjJb135sOD9q7U4iqKY3IFO24fqgI-KyM9Fha8bZkK5AfQAIPlp7vLwPiV_8io7PHMOUPT3VGqnDprRvLZuRwmjnNzZDkx0_vSAUkCqidS57ms8yvXVJb2QdRyGofyhQvNCMguIn3u6-uDO7a9EvmKHpX943TlzNQBnzzBNAvilzvWLyjUuT_IfxjJrL9x7OT5DE5pDLadGdke8cXgpQyMngm6dXPSHje1DT5QXtBkCqLxcFZ5Buy9PpVSZKgAoRNSPW4" />
+                </div>
+                <div class="bg-surface-container-high/40 p-6 rounded-2xl border border-white/5">
+                  <div class="flex justify-between items-center mb-4">
+                    <span class="font-bold text-white">Jean Dupont <span
+                        class="text-xs font-medium text-slate-500 ml-2">Client (Nexus Corp)</span></span>
+                    <span class="text-xs text-slate-500">Hier à 16:45</span>
+                  </div>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">Merci pour votre retour. Nous attendons la
+                    validation de notre équipe QA pour confirmer que le fix fonctionne sur notre environnement de
+                    staging.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- Right Column: Sidebar -->
+      <aside class="w-[320px] space-y-6">
+        <!-- Assignation Card -->
+        <div class="bg-surface-container-low rounded-3xl p-6 space-y-6">
+          <div>
+            <h4 class="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-4">Assigné à</h4>
+            <div
+              class="flex items-center justify-between group cursor-pointer hover:bg-white/5 p-2 rounded-xl transition-all">
+              <div class="flex items-center gap-3">
+                <img class="w-8 h-8 rounded-full object-cover"
+                  data-alt="portrait of a focused young man, dev-ops engineer profile"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv0k54Pts3fvgE7eTlT8agLl3qMA0n6BjsaZP5c08iiZCFMkcE5P8ufIv_9-wNzN_C0Hi-SXlrvRVhrkD-8E-9GU-BlEPyKr_00YPnzJBb1WlcaQf7tXXRjQXmrg-z7EZj4bDvnY6QThXCjukiN7KbtW829pIZpdA7tsQ0mtk7iTqnJt0UX7751iyTWA5fj7TLzqWkZ-rPDvqiazF44dcFm01Vp-bBy03Bew9wFTt8OzYEqLPwivbb6pCv4943eBo2gVwBrAHnGHg" />
+                <div>
+                  <p class="text-sm font-bold text-white">Marc Lefebvre</p>
+                  <p class="text-[10px] text-slate-500">Lead Developer</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-slate-500 text-sm">expand_more</span>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-white/5 space-y-5">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Priorité</span>
+              <span
+                class="flex items-center gap-2 bg-error/10 text-error px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                <span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                Haute
+              </span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Projet</span>
+              <span class="text-xs font-bold text-white">Core UI Dashboard</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Client</span>
+              <span class="text-xs font-bold text-primary">Nexus Corp.</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Type</span>
+              <span class="flex items-center gap-1.5 text-xs font-bold text-white">
+                <span class="material-symbols-outlined text-sm text-tertiary">bug_report</span>
+                Bug Critique
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- SLA & Meta Card -->
+        <div class="bg-surface-container-low rounded-3xl p-6 space-y-4">
+          <h4 class="text-[10px] uppercase tracking-widest font-bold text-slate-500">SLA &amp; Délais</h4>
+          <div class="space-y-4">
+            <div class="bg-surface-dim/50 p-4 rounded-2xl space-y-2">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-400">Temps de réponse</span>
+                <span class="text-secondary font-bold">Respecté (12m)</span>
+              </div>
+              <div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+                <div class="w-full h-full bg-secondary"></div>
+              </div>
+            </div>
+            <div class="bg-surface-dim/50 p-4 rounded-2xl space-y-2">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-400">Résolution prévue</span>
+                <span class="text-tertiary font-bold">Dans 4h 30m</span>
+              </div>
+              <div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+                <div class="w-[65%] h-full bg-tertiary"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Shared Files -->
+        <div class="bg-surface-container-low rounded-3xl p-6 space-y-4">
+          <h4 class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Fichiers joints</h4>
+          <div class="space-y-3">
+            <div
+              class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-primary">description</span>
+              <div class="flex-1 overflow-hidden">
+                <p class="text-xs font-bold text-white truncate">error_logs_nexus.txt</p>
+                <p class="text-[10px] text-slate-500">12.4 KB</p>
+              </div>
+              <span class="material-symbols-outlined text-slate-500 text-sm">download</span>
+            </div>
+            <div
+              class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-primary">image</span>
+              <div class="flex-1 overflow-hidden">
+                <p class="text-xs font-bold text-white truncate">ui_glitch_v1.png</p>
+                <p class="text-[10px] text-slate-500">2.1 MB</p>
+              </div>
+              <span class="material-symbols-outlined text-slate-500 text-sm">download</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+</body>
+
+</html>

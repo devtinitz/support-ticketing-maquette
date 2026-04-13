@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Satoshi:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="dark" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Satoshi:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -76,309 +80,338 @@
             },
         }
     </script>
-<style>
-        body { font-family: 'Satoshi', sans-serif; }
-        .font-headline { font-family: 'Inter', sans-serif; }
+    <style>
+        body {
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Inter', sans-serif;
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface antialiased overflow-hidden">
-<!-- SideNavBar -->
-<aside class="fixed left-0 top-0 h-full w-[280px] bg-[#171f33] flex flex-col py-8 px-6 shadow-2xl shadow-indigo-950/20 z-50">
-<div class="mb-10 px-2">
-<h1 class="text-xl font-bold tracking-tight text-white font-headline">SupportKit</h1>
-<p class="text-slate-400 text-xs font-medium tracking-widest uppercase mt-1">Dashboard</p>
-</div>
-<nav class="flex-1 space-y-1">
-<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200 group" href="#">
-<span class="material-symbols-outlined text-xl">dashboard</span>
-<span class="font-medium">Tableau de bord</span>
-</a>
-<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200 group" href="#">
-<span class="material-symbols-outlined text-xl">confirmation_number</span>
-<span class="font-medium">Tickets</span>
-</a>
-<!-- Active State: Projets -->
-<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 text-white font-bold border-r-2 border-[#6366F1] bg-[#222a3d] group" href="#">
-<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">folder</span>
-<span class="font-medium">Projets</span>
-</a>
-<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200 group" href="#">
-<span class="material-symbols-outlined text-xl">group</span>
-<span class="font-medium">Clients</span>
-</a>
-<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200 group" href="#">
-<span class="material-symbols-outlined text-xl">person</span>
-<span class="font-medium">Membres</span>
-</a>
-<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200 group" href="#">
-<span class="material-symbols-outlined text-xl">notifications</span>
-<span class="font-medium">Notifications</span>
-</a>
-<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200 group" href="#">
-<span class="material-symbols-outlined text-xl">settings</span>
-<span class="font-medium">Paramètres</span>
-</a>
-</nav>
-<div class="mt-auto pt-6">
-<button class="w-full flex items-center justify-center gap-2 py-3.5 px-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl active:scale-95 transition-all shadow-lg shadow-indigo-500/10 hover:brightness-110">
-<span class="material-symbols-outlined">add</span>
-<span>+ Nouveau ticket</span>
-</button>
-</div>
-</aside>
-<!-- Main Content Area -->
-<main class="ml-[280px] min-h-screen flex flex-col">
-<!-- TopNavBar -->
-<header class="fixed top-0 right-0 w-[calc(100%-280px)] z-40 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10">
-<div class="flex items-center gap-6 flex-1">
-<div class="relative w-full max-w-md group">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
-<input class="w-full bg-surface-container-highest/30 border-none focus:ring-1 focus:ring-primary/50 rounded-xl pl-11 pr-4 py-2.5 text-sm transition-all placeholder:text-outline-variant" placeholder="Rechercher un projet..." type="text"/>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<button class="p-2.5 rounded-full hover:bg-white/5 transition-all text-slate-400 active:scale-95">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<div class="h-8 w-[1px] bg-outline-variant/30 mx-2"></div>
-<div class="flex items-center gap-3 pl-2">
-<div class="text-right hidden sm:block">
-<p class="text-sm font-bold text-on-surface">Alexandre Dubois</p>
-<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Administrateur</p>
-</div>
-<img alt="Admin Avatar" class="h-10 w-10 rounded-xl object-cover ring-2 ring-primary/20" data-alt="Close up portrait of a professional man with a friendly expression, soft studio lighting, high-end business photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxBk1TpQFUSZUyooOujENJfuVox1fTL78y2Qwy5_x7ltXrv61JZADxP4cBStZfYhzF4PKP-WkWFEHz7E6EDAiQ2apMlLykF8ADMSxJbQyyy3CcelZrrPosLBPSPPMv55EDRUPSAXlwYAMz-31G0t6Z-HzvNxytIqS7t26Ygdp3qZyfAdsLnAfKyN91ovtdTJWJrNTa59UaB9gLMZUNMgnrjB_P8zz0-LHdZDDKpJ3CcMbOoRyQa0hChjGdmqD6KWjqTGXYYuK-r6k"/>
-</div>
-</div>
-</header>
-<!-- Content Canvas -->
-<div class="mt-20 p-10 flex-1 overflow-y-auto">
-<!-- Header Section -->
-<div class="flex justify-between items-end mb-10">
-<div>
-<h2 class="text-3xl font-extrabold font-headline tracking-tight text-white">Gestion des Projets</h2>
-<p class="text-slate-400 mt-2 max-w-lg">Gérez vos écosystèmes clients, configurez les clés d'accès et suivez le volume de tickets en temps réel.</p>
-</div>
-<button class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition-all active:scale-95">
-<span class="material-symbols-outlined text-primary">add_circle</span>
-<span>Ajouter un projet</span>
-</button>
-</div>
-<!-- Dashboard Statistics (Asymmetric Bento Lite) -->
-<div class="grid grid-cols-12 gap-6 mb-10">
-<div class="col-span-8 bg-surface-container-low rounded-3xl p-8 relative overflow-hidden group">
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] -mr-32 -mt-32"></div>
-<div class="relative z-10 flex justify-between items-start">
-<div>
-<p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-1">Activité Totale</p>
-<h3 class="text-4xl font-black font-headline text-white">1,284</h3>
-<div class="flex items-center gap-2 text-secondary mt-3 font-bold">
-<span class="material-symbols-outlined text-sm">trending_up</span>
-<span class="text-sm">+12.5% cette semaine</span>
-</div>
-</div>
-<div class="flex gap-2">
-<div class="w-12 h-24 bg-white/5 rounded-full flex items-end p-1">
-<div class="w-full h-1/2 bg-primary/30 rounded-full"></div>
-</div>
-<div class="w-12 h-24 bg-white/5 rounded-full flex items-end p-1">
-<div class="w-full h-3/4 bg-primary/50 rounded-full"></div>
-</div>
-<div class="w-12 h-24 bg-white/5 rounded-full flex items-end p-1">
-<div class="w-full h-1/3 bg-primary/30 rounded-full"></div>
-</div>
-<div class="w-12 h-24 bg-white/5 rounded-full flex items-end p-1">
-<div class="w-full h-[90%] bg-primary rounded-full shadow-lg shadow-primary/20"></div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-span-4 bg-gradient-to-br from-[#171f33] to-[#0b1326] border border-white/5 rounded-3xl p-8 flex flex-col justify-between">
-<div>
-<p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-1">Projets Actifs</p>
-<h3 class="text-4xl font-black font-headline text-white">24</h3>
-</div>
-<div class="flex -space-x-3 mt-4">
-<img alt="user" class="w-10 h-10 rounded-full border-2 border-surface object-cover" data-alt="Female professional portrait, modern corporate style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjf_-LNZIl1PTUkMxCOFVOZ2P13SWMhWCrJcIzBOK0u8f_K2ZmFwuXD9MEWsWT_J8qr3R3OZxVflb6K1Dr902Rd3V9MYXHNlmLR90akPVaOJQOw1xjPq52ieX-ipYNc1LsErRRQmpd86s1XqR4sxefODQfY3_bSsBJsfp5Tw-G_EXWjKUuXxoRgzuiuyDbqgPkiTWvk0aTGoqGqS9ucBzPGyxZJJLtmiRaZOamuguU5oSxhMttlM5iocunSSu7Syv6zDGYABZa4vI"/>
-<img alt="user" class="w-10 h-10 rounded-full border-2 border-surface object-cover" data-alt="Male professional portrait, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABdlIh_Hw7GqHZ7SeauWP71fLcA41erCIvt0Y1Zj7qFAvHiMJbQc0XL7bcq614ZCbXLVUBVnJ7rnyJkW0BYJ7765wNzN0N6ih_7RAVofMkYa0ENFxbzle18E73kFbgw0lQKbJU4OT2SI19cp-elmtJboEf2-iA6o7FchQxNHA9uWH1XBGPwG5-rYxcaQtFik3LGiZao3N4HZLDiTA1Ntegev42b5tSp49EJW8j9fEn4TpLYXtZ8luviHx8qndEaVfGulGfXMVokw8"/>
-<img alt="user" class="w-10 h-10 rounded-full border-2 border-surface object-cover" data-alt="Portrait of a young businessman in soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB23WpwrwjvCBRPs6lOgLYaO3aH0Mdce3h-AFyXeZfbgZTt-sHNj6M3wEPUCEEO4S5lOFJEd8yb_DHDI5mNVtBulLystM09m0QypPGCfLkJr-UqDRcy7IG656C4r2XKAw6Ft9aTgiLohhBmnauUi98jajgmHnZJ6oqtuKuAcQFjufwgaUr_zOhW9M9cpkrxal8M_BMz02uhGmzWJ8Qwi5O8kUgqEc5rCCEIK_0Gmv5C-65kJ7vgPWf_mHQvrdEHHLaucj5Koi35fnY"/>
-<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">+12</div>
-</div>
-</div>
-</div>
-<!-- Table Section -->
-<div class="bg-surface-container-low rounded-3xl overflow-hidden">
-<div class="px-8 py-6 flex justify-between items-center border-b border-white/5">
-<h4 class="font-bold text-white uppercase tracking-widest text-xs">Liste des Projets</h4>
-<button class="p-2 hover:bg-white/5 rounded-lg transition-all">
-<span class="material-symbols-outlined text-slate-400">filter_list</span>
-</button>
-</div>
-<div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">
-<th class="px-8 py-5">Nom du projet</th>
-<th class="px-8 py-5">Clé API</th>
-<th class="px-8 py-5">Tickets</th>
-<th class="px-8 py-5">Clients associés</th>
-<th class="px-8 py-5">Statut</th>
-<th class="px-8 py-5">Dernière activité</th>
-<th class="px-8 py-5"></th>
-</tr>
-</thead>
-<tbody class="text-sm">
-<!-- Project Row 1 -->
-<tr class="group hover:bg-white/[0.02] transition-all">
-<td class="px-8 py-6">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold">N</div>
-<div>
-<p class="text-on-surface font-bold">Nexus Cloud</p>
-<p class="text-xs text-slate-500">nexus-main-prod</p>
-</div>
-</div>
-</td>
-<td class="px-8 py-6 font-mono text-xs text-slate-400">sk_live_••••8k2m</td>
-<td class="px-8 py-6">
-<div class="flex items-center gap-2">
-<span class="font-bold text-white">452</span>
-<div class="w-16 h-1 bg-white/5 rounded-full overflow-hidden">
-<div class="w-2/3 h-full bg-primary"></div>
-</div>
-</div>
-</td>
-<td class="px-8 py-6 text-slate-400">12 entreprises</td>
-<td class="px-8 py-6">
-<span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container/20 text-secondary text-xs font-bold border border-secondary/20">
-                                        Actif
-                                    </span>
-</td>
-<td class="px-8 py-6 text-slate-400">Il y a 14 min</td>
-<td class="px-8 py-6 text-right">
-<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-white/5 rounded-lg transition-all">
-<span class="material-symbols-outlined text-slate-400">more_vert</span>
-</button>
-</td>
-</tr>
-<!-- Project Row 2 -->
-<tr class="group hover:bg-white/[0.02] transition-all">
-<td class="px-8 py-6">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary font-bold">Q</div>
-<div>
-<p class="text-on-surface font-bold">Quantum API</p>
-<p class="text-xs text-slate-500">quantum-dev-node</p>
-</div>
-</div>
-</td>
-<td class="px-8 py-6 font-mono text-xs text-slate-400">sk_test_••••3j91</td>
-<td class="px-8 py-6">
-<div class="flex items-center gap-2">
-<span class="font-bold text-white">89</span>
-<div class="w-16 h-1 bg-white/5 rounded-full overflow-hidden">
-<div class="w-1/4 h-full bg-primary"></div>
-</div>
-</div>
-</td>
-<td class="px-8 py-6 text-slate-400">5 entreprises</td>
-<td class="px-8 py-6">
-<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-highest/50 text-slate-400 text-xs font-bold border border-outline-variant/30">
-                                        Inactif
-                                    </span>
-</td>
-<td class="px-8 py-6 text-slate-400">2 oct. 2023</td>
-<td class="px-8 py-6 text-right">
-<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-white/5 rounded-lg transition-all">
-<span class="material-symbols-outlined text-slate-400">more_vert</span>
-</button>
-</td>
-</tr>
-<!-- Project Row 3 -->
-<tr class="group hover:bg-white/[0.02] transition-all">
-<td class="px-8 py-6">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary font-bold">V</div>
-<div>
-<p class="text-on-surface font-bold">Vortex Mobile</p>
-<p class="text-xs text-slate-500">vortex-ios-app</p>
-</div>
-</div>
-</td>
-<td class="px-8 py-6 font-mono text-xs text-slate-400">sk_live_••••1p4z</td>
-<td class="px-8 py-6">
-<div class="flex items-center gap-2">
-<span class="font-bold text-white">1,024</span>
-<div class="w-16 h-1 bg-white/5 rounded-full overflow-hidden">
-<div class="w-full h-full bg-primary shadow-sm shadow-primary/50"></div>
-</div>
-</div>
-</td>
-<td class="px-8 py-6 text-slate-400">34 entreprises</td>
-<td class="px-8 py-6">
-<span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container/20 text-secondary text-xs font-bold border border-secondary/20">
-                                        Actif
-                                    </span>
-</td>
-<td class="px-8 py-6 text-slate-400">Il y a 3 min</td>
-<td class="px-8 py-6 text-right">
-<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-white/5 rounded-lg transition-all">
-<span class="material-symbols-outlined text-slate-400">more_vert</span>
-</button>
-</td>
-</tr>
-<!-- Project Row 4 -->
-<tr class="group hover:bg-white/[0.02] transition-all">
-<td class="px-8 py-6">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-white font-bold">O</div>
-<div>
-<p class="text-on-surface font-bold">Omni CRM</p>
-<p class="text-xs text-slate-500">omni-internal</p>
-</div>
-</div>
-</td>
-<td class="px-8 py-6 font-mono text-xs text-slate-400">sk_live_••••9q0s</td>
-<td class="px-8 py-6">
-<div class="flex items-center gap-2">
-<span class="font-bold text-white">212</span>
-<div class="w-16 h-1 bg-white/5 rounded-full overflow-hidden">
-<div class="w-1/2 h-full bg-primary"></div>
-</div>
-</div>
-</td>
-<td class="px-8 py-6 text-slate-400">8 entreprises</td>
-<td class="px-8 py-6">
-<span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container/20 text-secondary text-xs font-bold border border-secondary/20">
-                                        Actif
-                                    </span>
-</td>
-<td class="px-8 py-6 text-slate-400">Il y a 2 heures</td>
-<td class="px-8 py-6 text-right">
-<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-white/5 rounded-lg transition-all">
-<span class="material-symbols-outlined text-slate-400">more_vert</span>
-</button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="px-8 py-6 border-t border-white/5 flex justify-between items-center text-xs text-slate-500">
-<p>Affichage de 1-4 sur 24 projets</p>
-<div class="flex gap-2">
-<button class="px-3 py-1 bg-white/5 hover:bg-white/10 rounded-lg transition-all disabled:opacity-30" disabled="">Précédent</button>
-<button class="px-3 py-1 bg-white/5 hover:bg-white/10 rounded-lg transition-all">Suivant</button>
-</div>
-</div>
-</div>
-</div>
-</main>
-<!-- Contextual Floating Button (Suppressed per rule as we are in a sub-page flow but kept as minimal action) -->
-<div class="fixed bottom-8 right-8 z-50">
-<button class="p-4 bg-primary text-on-primary rounded-2xl shadow-2xl shadow-primary/30 flex items-center justify-center active:scale-95 transition-transform">
-<span class="material-symbols-outlined">help</span>
-</button>
-</div>
-</body></html>
+
+<body class="bg-surface text-on-surface selection:bg-primary/30">
+    <!-- SideNavBar (Permanent Shell) -->
+    <aside
+        class="fixed left-0 top-0 h-full w-[280px] bg-[#171f33] shadow-2xl shadow-indigo-950/20 flex flex-col py-8 px-6 z-50">
+        <div class="flex items-center gap-3 mb-12">
+            <div
+                class="w-10 h-10 bg-gradient-to-br from-primary to-primary-container rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+                <span class="material-symbols-outlined text-on-primary-container"
+                    style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white">SupportKit</h1>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold">Dashboard</p>
+            </div>
+        </div>
+        <nav class="flex-1 space-y-2">
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="dashboard.html">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="font-medium">Tableau de bord</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="listedestickets.html">
+                <span class="material-symbols-outlined">confirmation_number</span>
+                <span class="font-medium">Tickets</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-white font-bold border-r-2 border-[#6366F1] bg-[#222a3d]/50"
+                href="listeprojet.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder</span>
+                <span class="font-medium">Projets</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="listesdesclients.html">
+                <span class="material-symbols-outlined">group</span>
+                <span class="font-medium">Clients</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="gestionmembres.html">
+                <span class="material-symbols-outlined">person</span>
+                <span class="font-medium">Membres</span>
+            </a>
+        </nav>
+        <div class="mt-auto space-y-2">
+            <button
+                class="w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/10 hover:scale-[0.98] active:scale-95 transition-all mb-6">
+                <a href="ajoutprojet.html">+ Nouveau projet</a>
+            </button>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="notification.html">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="font-medium">Notifications</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="parametre.html">
+                <span class="material-symbols-outlined">settings</span>
+                <span class="font-medium">Paramètres</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="ml-[280px] min-h-screen flex flex-col">
+        <!-- TopNavBar -->
+        <header
+            class="fixed top-0 right-0 w-[calc(100%-280px)] z-40 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10">
+            <div class="flex items-center gap-6 flex-1">
+                <div class="relative w-full max-w-md group">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+                    <input
+                        class="w-full bg-surface-container-highest/30 border-none focus:ring-1 focus:ring-primary/50 rounded-xl pl-11 pr-4 py-2.5 text-sm transition-all placeholder:text-outline-variant"
+                        placeholder="Rechercher un projet..." type="text" />
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="p-2.5 rounded-full hover:bg-white/5 transition-all text-slate-400 active:scale-95">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <div class="h-8 w-[1px] bg-outline-variant/30 mx-2"></div>
+                <div class="flex items-center gap-3 pl-2">
+                    <div class="text-right hidden sm:block">
+                        <p class="text-sm font-bold text-on-surface">Alexandre Dubois</p>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Administrateur</p>
+                    </div>
+                    <img alt="Admin Avatar" class="h-10 w-10 rounded-xl object-cover ring-2 ring-primary/20"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxBk1TpQFUSZUyooOujENJfuVox1fTL78y2Qwy5_x7ltXrv61JZADxP4cBStZfYhzF4PKP-WkWFEHz7E6EDAiQ2apMlLykF8ADMSxJbQyyy3CcelZrrPosLBPSPPMv55EDRUPSAXlwYAMz-31G0t6Z-HzvNxytIqS7t26Ygdp3qZyfAdsLnAfKyN91ovtdTJWJrNTa59UaB9gLMZUNMgnrjB_P8zz0-LHdZDDKpJ3CcMbOoRyQa0hChjGdmqD6KWjqTGXYYuK-r6k" />
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Canvas -->
+        <div class="mt-20 p-10 flex-1 overflow-y-auto">
+            <!-- Header Section -->
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-3xl font-extrabold tracking-tight text-white">Gestion des Projets</h2>
+                    <p class="text-slate-400 mt-2 max-w-lg">Gérez vos écosystèmes clients, configurez les clés d'accès
+                        et suivez le volume de tickets en temps réel.</p>
+                </div>
+                <button
+                    class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition-all active:scale-95">
+                    <span class="material-symbols-outlined text-primary">add_circle</span>
+                    <span>Ajouter un projet</span>
+                </button>
+            </div>
+
+            <!-- Dashboard Statistics -->
+            <div class="grid grid-cols-12 gap-6 mb-10">
+                <div class="col-span-8 bg-surface-container-low rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] -mr-32 -mt-32"></div>
+                    <div class="relative z-10 flex justify-between items-start">
+                        <div>
+                            <p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-1">Activité Totale
+                            </p>
+                            <h3 class="text-4xl font-black text-white">1,284</h3>
+                            <div class="flex items-center gap-2 text-secondary mt-3 font-bold">
+                                <span class="material-symbols-outlined text-sm">trending_up</span>
+                                <span class="text-sm">+12.5% cette semaine</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class="w-12 h-24 bg-white/5 rounded-full flex items-end p-1">
+                                <div class="w-full h-1/2 bg-primary/30 rounded-full"></div>
+                            </div>
+                            <div class="w-12 h-24 bg-white/5 rounded-full flex items-end p-1">
+                                <div class="w-full h-3/4 bg-primary/50 rounded-full"></div>
+                            </div>
+                            <div class="w-12 h-24 bg-white/5 rounded-full flex items-end p-1">
+                                <div class="w-full h-1/3 bg-primary/30 rounded-full"></div>
+                            </div>
+                            <div class="w-12 h-24 bg-white/5 rounded-full flex items-end p-1">
+                                <div class="w-full h-[90%] bg-primary rounded-full shadow-lg shadow-primary/20"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-span-4 bg-gradient-to-br from-[#171f33] to-[#0b1326] border border-white/5 rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-1">Projets Actifs</p>
+                        <h3 class="text-4xl font-black text-white">24</h3>
+                    </div>
+                    <div class="flex -space-x-3 mt-4">
+                        <img alt="user" class="w-10 h-10 rounded-full border-2 border-surface object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjf_-LNZIl1PTUkMxCOFVOZ2P13SWMhWCrJcIzBOK0u8f_K2ZmFwuXD9MEWsWT_J8qr3R3OZxVflb6K1Dr902Rd3V9MYXHNlmLR90akPVaOJQOw1xjPq52ieX-ipYNc1LsErRRQmpd86s1XqR4sxefODQfY3_bSsBJsfp5Tw-G_EXWjKUuXxoRgzuiuyDbqgPkiTWvk0aTGoqGqS9ucBzPGyxZJJLtmiRaZOamuguU5oSxhMttlM5iocunSSu7Syv6zDGYABZa4vI" />
+                        <img alt="user" class="w-10 h-10 rounded-full border-2 border-surface object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuABdlIh_Hw7GqHZ7SeauWP71fLcA41erCIvt0Y1Zj7qFAvHiMJbQc0XL7bcq614ZCbXLVUBVnJ7rnyJkW0BYJ7765wNzN0N6ih_7RAVofMkYa0ENFxbzle18E73kFbgw0lQKbJU4OT2SI19cp-elmtJboEf2-iA6o7FchQxNHA9uWH1XBGPwG5-rYxcaQtFik3LGiZao3N4HZLDiTA1Ntegev42b5tSp49EJW8j9fEn4TpLYXtZ8luviHx8qndEaVfGulGfXMVokw8" />
+                        <img alt="user" class="w-10 h-10 rounded-full border-2 border-surface object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB23WpwrwjvCBRPs6lOgLYaO3aH0Mdce3h-AFyXeZfbgZTt-sHNj6M3wEPUCEEO4S5lOFJEd8yb_DHDI5mNVtBulLystM09m0QypPGCfLkJr-UqDRcy7IG656C4r2XKAw6Ft9aTgiLohhBmnauUi98jajgmHnZJ6oqtuKuAcQFjufwgaUr_zOhW9M9cpkrxal8M_BMz02uhGmzWJ8Qwi5O8kUgqEc5rCCEIK_0Gmv5C-65kJ7vgPWf_mHQvrdEHHLaucj5Koi35fnY" />
+                        <div
+                            class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">
+                            +12</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Section -->
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden">
+                <div class="px-8 py-6 flex justify-between items-center border-b border-white/5">
+                    <h4 class="font-bold text-white uppercase tracking-widest text-xs">Liste des Projets</h4>
+                    <button class="p-2 hover:bg-white/5 rounded-lg transition-all">
+                        <span class="material-symbols-outlined text-slate-400">filter_list</span>
+                    </button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">
+                                <th class="px-8 py-5">Nom du projet</th>
+                                <th class="px-8 py-5">Clé API</th>
+                                <th class="px-8 py-5">Tickets</th>
+                                <th class="px-8 py-5">Clients associés</th>
+                                <th class="px-8 py-5">Statut</th>
+                                <th class="px-8 py-5">Dernière activité</th>
+                                <th class="px-8 py-5"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr class="group hover:bg-white/[0.02] transition-all">
+                                <td class="px-8 py-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold">
+                                            N</div>
+                                        <div>
+                                            <p class="text-on-surface font-bold">Nexus Cloud</p>
+                                            <p class="text-xs text-slate-500">nexus-main-prod</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-8 py-6 font-mono text-xs text-slate-400">sk_live_••••8k2m</td>
+                                <td class="px-8 py-6">
+                                    <div class="flex items-center gap-2"><span class="font-bold text-white">452</span>
+                                        <div class="w-16 h-1 bg-white/5 rounded-full overflow-hidden">
+                                            <div class="w-2/3 h-full bg-primary"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-8 py-6 text-slate-400">12 entreprises</td>
+                                <td class="px-8 py-6"><span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container/20 text-secondary text-xs font-bold border border-secondary/20">Actif</span>
+                                </td>
+                                <td class="px-8 py-6 text-slate-400">Il y a 14 min</td>
+                                <td class="px-8 py-6 text-right"><button
+                                        class="opacity-0 group-hover:opacity-100 p-2 hover:bg-white/5 rounded-lg transition-all"><span
+                                            class="material-symbols-outlined text-slate-400">more_vert</span></button>
+                                </td>
+                            </tr>
+                            <tr class="group hover:bg-white/[0.02] transition-all">
+                                <td class="px-8 py-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary font-bold">
+                                            Q</div>
+                                        <div>
+                                            <p class="text-on-surface font-bold">Quantum API</p>
+                                            <p class="text-xs text-slate-500">quantum-dev-node</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-8 py-6 font-mono text-xs text-slate-400">sk_test_••••3j91</td>
+                                <td class="px-8 py-6">
+                                    <div class="flex items-center gap-2"><span class="font-bold text-white">89</span>
+                                        <div class="w-16 h-1 bg-white/5 rounded-full overflow-hidden">
+                                            <div class="w-1/4 h-full bg-primary"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-8 py-6 text-slate-400">5 entreprises</td>
+                                <td class="px-8 py-6"><span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-highest/50 text-slate-400 text-xs font-bold border border-outline-variant/30">Inactif</span>
+                                </td>
+                                <td class="px-8 py-6 text-slate-400">2 oct. 2023</td>
+                                <td class="px-8 py-6 text-right"><button
+                                        class="opacity-0 group-hover:opacity-100 p-2 hover:bg-white/5 rounded-lg transition-all"><span
+                                            class="material-symbols-outlined text-slate-400">more_vert</span></button>
+                                </td>
+                            </tr>
+                            <tr class="group hover:bg-white/[0.02] transition-all">
+                                <td class="px-8 py-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary font-bold">
+                                            V</div>
+                                        <div>
+                                            <p class="text-on-surface font-bold">Vortex Mobile</p>
+                                            <p class="text-xs text-slate-500">vortex-ios-app</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-8 py-6 font-mono text-xs text-slate-400">sk_live_••••1p4z</td>
+                                <td class="px-8 py-6">
+                                    <div class="flex items-center gap-2"><span class="font-bold text-white">1,024</span>
+                                        <div class="w-16 h-1 bg-white/5 rounded-full overflow-hidden">
+                                            <div class="w-full h-full bg-primary shadow-sm shadow-primary/50"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-8 py-6 text-slate-400">34 entreprises</td>
+                                <td class="px-8 py-6"><span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container/20 text-secondary text-xs font-bold border border-secondary/20">Actif</span>
+                                </td>
+                                <td class="px-8 py-6 text-slate-400">Il y a 3 min</td>
+                                <td class="px-8 py-6 text-right"><button
+                                        class="opacity-0 group-hover:opacity-100 p-2 hover:bg-white/5 rounded-lg transition-all"><span
+                                            class="material-symbols-outlined text-slate-400">more_vert</span></button>
+                                </td>
+                            </tr>
+                            <tr class="group hover:bg-white/[0.02] transition-all">
+                                <td class="px-8 py-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-white font-bold">
+                                            O</div>
+                                        <div>
+                                            <p class="text-on-surface font-bold">Omni CRM</p>
+                                            <p class="text-xs text-slate-500">omni-internal</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-8 py-6 font-mono text-xs text-slate-400">sk_live_••••9q0s</td>
+                                <td class="px-8 py-6">
+                                    <div class="flex items-center gap-2"><span class="font-bold text-white">212</span>
+                                        <div class="w-16 h-1 bg-white/5 rounded-full overflow-hidden">
+                                            <div class="w-1/2 h-full bg-primary"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-8 py-6 text-slate-400">8 entreprises</td>
+                                <td class="px-8 py-6"><span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container/20 text-secondary text-xs font-bold border border-secondary/20">Actif</span>
+                                </td>
+                                <td class="px-8 py-6 text-slate-400">Il y a 2 heures</td>
+                                <td class="px-8 py-6 text-right"><button
+                                        class="opacity-0 group-hover:opacity-100 p-2 hover:bg-white/5 rounded-lg transition-all"><span
+                                            class="material-symbols-outlined text-slate-400">more_vert</span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="px-8 py-6 border-t border-white/5 flex justify-between items-center text-xs text-slate-500">
+                    <p>Affichage de 1-4 sur 24 projets</p>
+                    <div class="flex gap-2">
+                        <button
+                            class="px-3 py-1 bg-white/5 hover:bg-white/10 rounded-lg transition-all disabled:opacity-30"
+                            disabled="">Précédent</button>
+                        <button
+                            class="px-3 py-1 bg-white/5 hover:bg-white/10 rounded-lg transition-all">Suivant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
