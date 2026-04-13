@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SupportKit Dashboard - Centre de Notifications</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Satoshi:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#452000", "on-surface": "#dae2fd", "on-primary-container": "#0d0096",
+                        "surface-dim": "#0b1326", "surface-container-low": "#131b2e", "on-tertiary-fixed": "#301400",
+                        "surface-variant": "#2d3449", "on-primary-fixed": "#07006c", "primary-fixed": "#e1e0ff",
+                        "on-secondary-container": "#00311f", "error-container": "#93000a", "on-secondary-fixed": "#002113",
+                        "surface-container-highest": "#2d3449", "inverse-primary": "#494bd6", "primary-fixed-dim": "#c0c1ff",
+                        "surface-container-lowest": "#060e20", "on-surface-variant": "#c7c4d7", "tertiary": "#ffb783",
+                        "surface-tint": "#c0c1ff", "on-secondary": "#003824", "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-container-high": "#222a3d", "primary": "#c0c1ff", "tertiary-container": "#d97721",
+                        "tertiary-fixed": "#ffdcc5", "secondary-fixed": "#6ffbbe", "inverse-on-surface": "#283044",
+                        "inverse-surface": "#dae2fd", "surface": "#0b1326", "on-tertiary": "#4f2500", "on-error": "#690005",
+                        "on-background": "#dae2fd", "outline-variant": "#464554", "surface-bright": "#31394d",
+                        "on-error-container": "#ffdad6", "secondary-container": "#00a572", "surface-container": "#171f33",
+                        "secondary-fixed-dim": "#4edea3", "background": "#0b1326", "on-primary": "#1000a9",
+                        "outline": "#908fa0", "error": "#ffb4ab", "tertiary-fixed-dim": "#ffb783",
+                        "primary-container": "#8083ff", "on-secondary-fixed-variant": "#005236",
+                        "on-tertiary-fixed-variant": "#703700", "secondary": "#4edea3"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Satoshi", "sans-serif"],
+                        "label": ["Satoshi", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary/30">
+    <!-- SideNavBar (Permanent Shell) -->
+    <aside
+        class="fixed left-0 top-0 h-full w-[280px] bg-[#171f33] shadow-2xl shadow-indigo-950/20 flex flex-col py-8 px-6 z-50">
+        <div class="flex items-center gap-3 mb-12">
+            <div
+                class="w-10 h-10 bg-gradient-to-br from-primary to-primary-container rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+                <span class="material-symbols-outlined text-on-primary-container"
+                    style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white">SupportKit</h1>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold">Dashboard</p>
+            </div>
+        </div>
+        <nav class="flex-1 space-y-2">
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="dashboard.html">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="font-medium">Tableau de bord</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="listedestickets.html">
+                <span class="material-symbols-outlined">confirmation_number</span>
+                <span class="font-medium">Tickets</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="listeprojet.html">
+                <span class="material-symbols-outlined">folder</span>
+                <span class="font-medium">Projets</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="listesdesclients.html">
+                <span class="material-symbols-outlined">group</span>
+                <span class="font-medium">Clients</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="gestionmembres.html">
+                <span class="material-symbols-outlined">person</span>
+                <span class="font-medium">Membres</span>
+            </a>
+        </nav>
+        <div class="mt-auto space-y-2">
+            <button
+                class="w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/10 hover:scale-[0.98] active:scale-95 transition-all mb-6">
+                <a href="ajoutprojet.html">+ Nouveau projet</a>
+            </button>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-white font-bold border-r-2 border-[#6366F1] bg-[#222a3d]/50"
+                href="notification.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications</span>
+                <span class="font-medium">Notifications</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200"
+                href="parametre.html">
+                <span class="material-symbols-outlined">settings</span>
+                <span class="font-medium">Paramètres</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="ml-[280px] min-h-screen flex flex-col">
+        <!-- TopNavBar -->
+        <header
+            class="fixed top-0 right-0 w-[calc(100%-280px)] z-40 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10">
+            <div class="flex items-center gap-6 w-1/2">
+                <div class="relative w-full max-w-md">
+                    <span
+                        class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                    <input
+                        class="w-full bg-surface-container-high/40 border-none rounded-full py-2.5 pl-11 pr-4 text-sm focus:ring-1 focus:ring-primary/50 placeholder:text-slate-500 transition-all"
+                        placeholder="Rechercher un ticket ou une notification..." type="text" />
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="relative text-slate-400 hover:bg-white/5 p-2 rounded-full transition-all">
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 1;">notifications</span>
+                    <span
+                        class="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full border-2 border-[#0b1326]"></span>
+                </button>
+                <div class="flex items-center gap-3 pl-4 border-l border-white/10">
+                    <div class="text-right">
+                        <p class="text-xs font-bold text-white leading-none">Admin</p>
+                        <p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Superuser</p>
+                    </div>
+                    <img alt="Admin Avatar" class="w-10 h-10 rounded-full border-2 border-primary/20 object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrA_eQIwYX4Qqep-BbbGWc6YfM0U3ko9IfaR6fCO37tVru1eA-o2nAyOtVkrV_kevOGrjof4AWz5RR0S-DvRYKHy55Pf9ZOVNpUGYqY2eafXxsozOPFH6UNZLxY5hln5p5Itpis1UVZR7NNuWEMdS3NWl6LlwXvMmaqBy--gutW0sQ7tRV2joBQb8zV7D1f2Pp_VNxKyV5dhPvRFFt4rUf254eKziZUZJAZx6szQst38Kyz3ZgUwiDLPon3EIuop5j2Rvt2uy678E" />
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Canvas -->
+        <div class="pt-28 px-10 pb-10 flex flex-col gap-8 flex-1 mt-20">
+            <!-- Page Header & Filters -->
+            <section class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <h2 class="text-3xl font-extrabold tracking-tight text-white mb-2">Centre de Notifications</h2>
+                    <p class="text-slate-400 max-w-2xl font-medium">Restez informé de l'activité de vos clients, de
+                        l'état du système et des actions de votre équipe en temps réel.</p>
+                </div>
+                <div class="flex items-center gap-2 bg-surface-container-low p-1.5 rounded-2xl">
+                    <button
+                        class="px-6 py-2 bg-surface-container-highest text-primary font-bold rounded-xl text-sm transition-all">Tout</button>
+                    <button
+                        class="px-6 py-2 text-slate-400 hover:text-white rounded-xl text-sm transition-all">Priorité</button>
+                    <button
+                        class="px-6 py-2 text-slate-400 hover:text-white rounded-xl text-sm transition-all">Système</button>
+                    <button
+                        class="px-6 py-2 text-slate-400 hover:text-white rounded-xl text-sm transition-all">Assignations</button>
+                </div>
+            </section>
+
+            <!-- Notification Layout -->
+            <div class="grid grid-cols-12 gap-6">
+                <!-- Main Feed -->
+                <div class="col-span-12 lg:col-span-8 space-y-4">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span
+                            class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-primary whitespace-nowrap">Aujourd'hui</span>
+                        <div class="h-[1px] w-full bg-outline-variant/10"></div>
+                    </div>
+                    <!-- Notification Card: New Ticket -->
+                    <div
+                        class="group relative overflow-hidden bg-surface-container-high rounded-[20px] p-6 transition-all hover:bg-surface-container-highest/80 flex items-start gap-5">
+                        <div
+                            class="absolute left-0 top-0 bottom-0 w-1 bg-primary scale-y-0 group-hover:scale-y-100 transition-transform duration-300">
+                        </div>
+                        <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary">add_circle</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-white font-bold text-lg">Nouveau ticket de Marc Dupont</h3>
+                                <span class="text-xs text-slate-500 font-medium">Il y a 12 min</span>
+                            </div>
+                            <p class="text-slate-400 leading-relaxed mb-4">"Je n'arrive plus à accéder à mon panneau
+                                d'administration depuis la dernière mise à jour..."</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="px-3 py-1 bg-secondary-container/10 text-secondary text-[10px] font-bold uppercase tracking-wider rounded-full">Urgent</span>
+                                <span
+                                    class="px-3 py-1 bg-surface-container-highest text-slate-300 text-[10px] font-bold uppercase tracking-wider rounded-full">ID:
+                                    #TK-2049</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="p-2 bg-white/5 hover:bg-white/10 rounded-lg text-slate-300 transition-colors"><span
+                                    class="material-symbols-outlined text-sm">done</span></button>
+                            <button
+                                class="p-2 bg-white/5 hover:bg-white/10 rounded-lg text-slate-300 transition-colors"><span
+                                    class="material-symbols-outlined text-sm">more_vert</span></button>
+                        </div>
+                    </div>
+                    <!-- Notification Card: Response Received -->
+                    <div
+                        class="group relative overflow-hidden bg-surface-container-high rounded-[20px] p-6 transition-all hover:bg-surface-container-highest/80 flex items-start gap-5">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-secondary">reply</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-white font-bold text-lg">Réponse client reçue</h3>
+                                <span class="text-xs text-slate-500 font-medium">Il y a 1h</span>
+                            </div>
+                            <p class="text-slate-400 leading-relaxed mb-4">Sophie Martin a répondu au ticket <span
+                                    class="text-secondary font-semibold">#TK-1982</span> concernant la facturation.</p>
+                            <div class="flex items-center -space-x-2">
+                                <img class="w-6 h-6 rounded-full border-2 border-surface-container-high"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAcHvhIp97H5SjPk3RGC_9x1Nnt1GQf8B8TZ1zapI_kMCVci3lYEG5S9Ygrea7xN9yv_QTr-TA5e1QMIRYV2rGbNgSFEmc8Me6LV7WdL7oy0HvwGqy0ExCkQ1rPC9aAy0G3crGkRFZszTuUtc2C9nGi2O9aYi4vxwtDJxlB4PgOdPP_UH10hyhfAJsybhwnYaJRF_b1hf9EMqtTfybp0ottzjjSqm7u-HnojxWzXWd2mREsQv8P_XYOXl2KYxXdQ5unJrm2CXNB6o"
+                                    alt="Sophie" />
+                                <span class="ml-4 text-[10px] text-slate-500 uppercase tracking-widest font-bold">Projet
+                                    Horizon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Day Group: Hier -->
+                    <div class="flex items-center gap-4 py-6">
+                        <span
+                            class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-500 whitespace-nowrap">Hier</span>
+                        <div class="h-[1px] w-full bg-outline-variant/10"></div>
+                    </div>
+                    <!-- Notification Card: Bug -->
+                    <div
+                        class="group relative overflow-hidden bg-surface-container-high rounded-[20px] p-6 transition-all hover:bg-surface-container-highest/80 flex items-start gap-5">
+                        <div class="w-12 h-12 bg-error/10 rounded-2xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-error">emergency_home</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-white font-bold text-lg">Bug auto détecté</h3>
+                                <span class="text-xs text-slate-500 font-medium">14:22</span>
+                            </div>
+                            <p class="text-slate-400 leading-relaxed mb-4">Une erreur 500 récurrente a été détectée sur
+                                l'API <span class="text-error font-medium">/v1/auth/validate</span>. 8 clients impactés.
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="flex items-center gap-2 bg-error-container/20 px-3 py-1.5 rounded-lg border border-error/20">
+                                    <span class="w-1.5 h-1.5 bg-error rounded-full"></span>
+                                    <span
+                                        class="text-[10px] font-bold text-error uppercase tracking-tighter">Critique</span>
+                                </div>
+                                <button
+                                    class="text-[10px] font-bold text-primary uppercase tracking-widest hover:underline">Voir
+                                    les logs</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Notification Card: Team Activity -->
+                    <div
+                        class="group relative overflow-hidden bg-surface-container-high rounded-[20px] p-6 transition-all hover:bg-surface-container-highest/80 flex items-start gap-5">
+                        <div class="w-12 h-12 bg-tertiary/10 rounded-2xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-tertiary">assignment_ind</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-white font-bold text-lg">Assignation de membre</h3>
+                                <span class="text-xs text-slate-500 font-medium">10:05</span>
+                            </div>
+                            <p class="text-slate-400 leading-relaxed">Jean-Luc vous a assigné au projet <span
+                                    class="text-white font-bold">Refonte UX Mobile</span>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Utility Panel -->
+                <div class="col-span-12 lg:col-span-4 space-y-6">
+                    <!-- Summary Card -->
+                    <div class="bg-surface-bright/40 backdrop-blur-xl border border-white/5 rounded-3xl p-8 shadow-2xl">
+                        <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">analytics</span>
+                            Aperçu de la semaine
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-end">
+                                <div>
+                                    <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-1">Total
+                                    </p>
+                                    <p class="text-3xl font-black text-white">128</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs font-bold text-secondary mb-1">+12%</p>
+                                    <div class="w-24 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+                                        <div class="w-[70%] h-full bg-secondary"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white/5 rounded-2xl p-4 border border-white/5">
+                                    <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Tickets
+                                    </p>
+                                    <p class="text-xl font-bold text-white mt-1">42</p>
+                                </div>
+                                <div class="bg-white/5 rounded-2xl p-4 border border-white/5">
+                                    <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Alertes
+                                    </p>
+                                    <p class="text-xl font-bold text-error mt-1">05</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-8 py-3 bg-white/5 hover:bg-white/10 text-white text-sm font-bold rounded-xl transition-all border border-white/5">Rapport
+                            complet</button>
+                    </div>
+                    <!-- Quick Actions Widget -->
+                    <div class="bg-surface-container-high rounded-3xl p-6 border border-white/5">
+                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Paramètres rapides
+                        </h3>
+                        <div class="space-y-4">
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="text-sm text-slate-300 group-hover:text-white transition-colors">Emails
+                                    d'alerte</span>
+                                <div class="w-10 h-5 bg-primary/20 rounded-full relative">
+                                    <div class="absolute right-1 top-1 w-3 h-3 bg-primary rounded-full"></div>
+                                </div>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span
+                                    class="text-sm text-slate-300 group-hover:text-white transition-colors">Notifications
+                                    Bureau</span>
+                                <div class="w-10 h-5 bg-surface-container-highest rounded-full relative">
+                                    <div class="absolute left-1 top-1 w-3 h-3 bg-slate-500 rounded-full"></div>
+                                </div>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="text-sm text-slate-300 group-hover:text-white transition-colors">Son
+                                    d'alerte</span>
+                                <div class="w-10 h-5 bg-primary/20 rounded-full relative">
+                                    <div class="absolute right-1 top-1 w-3 h-3 bg-primary rounded-full"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Timeline -->
+                    <div class="bg-surface-container-high/40 rounded-3xl p-6 relative overflow-hidden">
+                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Activité système
+                        </h3>
+                        <div
+                            class="relative pl-6 space-y-6 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/20">
+                            <div class="relative">
+                                <div
+                                    class="absolute -left-[27px] top-1.5 w-2.5 h-2.5 rounded-full bg-secondary border-2 border-surface-container-high">
+                                </div>
+                                <p class="text-xs text-white font-bold leading-tight">Sauvegarde réussie</p>
+                                <p class="text-[10px] text-slate-500 mt-1">Il y a 3h • Cloud Server 01</p>
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="absolute -left-[27px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary border-2 border-surface-container-high">
+                                </div>
+                                <p class="text-xs text-white font-bold leading-tight">Mise à jour v2.4.1</p>
+                                <p class="text-[10px] text-slate-500 mt-1">Hier • Core Engine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

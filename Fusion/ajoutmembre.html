@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background-color: #0b1326;
+        }
+        h1, h2, h3, h4, .headline-font {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(49, 57, 77, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #c0c1ff 0%, #8083ff 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#452000",
+                        "on-surface": "#dae2fd",
+                        "on-primary-container": "#0d0096",
+                        "surface-dim": "#0b1326",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary-fixed": "#301400",
+                        "surface-variant": "#2d3449",
+                        "on-primary-fixed": "#07006c",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-container": "#00311f",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#002113",
+                        "surface-container-highest": "#2d3449",
+                        "inverse-primary": "#494bd6",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-container-lowest": "#060e20",
+                        "on-surface-variant": "#c7c4d7",
+                        "tertiary": "#ffb783",
+                        "surface-tint": "#c0c1ff",
+                        "on-secondary": "#003824",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-container-high": "#222a3d",
+                        "primary": "#c0c1ff",
+                        "tertiary-container": "#d97721",
+                        "tertiary-fixed": "#ffdcc5",
+                        "secondary-fixed": "#6ffbbe",
+                        "inverse-on-surface": "#283044",
+                        "inverse-surface": "#dae2fd",
+                        "surface": "#0b1326",
+                        "on-tertiary": "#4f2500",
+                        "on-error": "#690005",
+                        "on-background": "#dae2fd",
+                        "outline-variant": "#464554",
+                        "surface-bright": "#31394d",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#00a572",
+                        "surface-container": "#171f33",
+                        "secondary-fixed-dim": "#4edea3",
+                        "background": "#0b1326",
+                        "on-primary": "#1000a9",
+                        "outline": "#908fa0",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "primary-container": "#8083ff",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-tertiary-fixed-variant": "#703700",
+                        "secondary": "#4edea3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Satoshi"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex">
+
+<!-- SideNavBar (identique à detailticket.html) -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-[#171f33] shadow-2xl shadow-indigo-950/20 flex flex-col py-8 px-6 z-50">
+  <div class="flex items-center gap-3 mb-12">
+    <div class="w-10 h-10 bg-gradient-to-br from-primary to-primary-container rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+      <span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+    </div>
+    <div>
+      <h1 class="text-xl font-bold tracking-tight text-white">SupportKit</h1>
+      <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold">Dashboard</p>
+    </div>
+  </div>
+  <nav class="flex-1 space-y-2">
+    <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="dashboard.html">
+      <span class="material-symbols-outlined">dashboard</span>
+      <span class="font-medium">Tableau de bord</span>
+    </a>
+    <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="listedestickets.html">
+      <span class="material-symbols-outlined">confirmation_number</span>
+      <span class="font-medium">Tickets</span>
+    </a>
+    <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="listeprojet.html">
+      <span class="material-symbols-outlined">folder</span>
+      <span class="font-medium">Projets</span>
+    </a>
+    <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="listesdesclients.html">
+      <span class="material-symbols-outlined">group</span>
+      <span class="font-medium">Clients</span>
+    </a>
+    <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-white font-bold border-r-2 border-[#6366F1] bg-[#222a3d]/50" href="gestionmembres.html">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+      <span class="font-medium">Membres</span>
+    </a>
+  </nav>
+  <div class="mt-auto space-y-2">
+    <button class="w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/10 hover:scale-[0.98] active:scale-95 transition-all mb-6">
+      <a href="ajoutprojet.html">+ Nouveau projet</a>
+    </button>
+    <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="notification.html">
+      <span class="material-symbols-outlined">notifications</span>
+      <span class="font-medium">Notifications</span>
+    </a>
+    <a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-[#222a3d] text-slate-400 hover:text-slate-200" href="parametre.html">
+      <span class="material-symbols-outlined">settings</span>
+      <span class="font-medium">Paramètres</span>
+    </a>
+  </div>
+</aside>
+
+<!-- Main Canvas -->
+<main class="ml-[280px] w-[calc(100%-280px)] min-h-screen relative">
+
+  <!-- TopNavBar (identique à detailticket.html) -->
+  <header class="fixed top-0 right-0 w-[calc(100%-280px)] z-40 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10">
+    <div class="flex items-center gap-6 w-1/2">
+      <div class="relative w-full max-w-md">
+        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+        <input class="w-full bg-surface-container-high/40 border-none rounded-full py-2.5 pl-11 pr-4 text-sm focus:ring-1 focus:ring-primary/50 placeholder:text-slate-500 transition-all" placeholder="Rechercher un ticket..." type="text"/>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <button class="text-slate-400 hover:bg-white/5 p-2 rounded-full transition-all">
+        <span class="material-symbols-outlined">notifications</span>
+      </button>
+      <div class="flex items-center gap-3 pl-4 border-l border-white/10">
+        <div class="text-right">
+          <p class="text-xs font-bold text-white leading-none">Admin Avatar</p>
+          <p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Superviseur</p>
+        </div>
+        <img class="w-10 h-10 rounded-full border-2 border-primary/20 object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5REy_Sv0t68KmOhxoD7h7R0zIQ65AInQiCQK5ZzAJugSLzFGsxIvXXcVqO75NEyZ0vXyh9T5OcFLiq_HWnQ7gZSxC1AZ7RXPXwKT5Rg6DanMTPdrXgnzwQhKcrHeHl_Jg-279hlQFALrZ6xFPElBDVzJA-ihO0zt1IP0XhW5V_sxyoyp5C02W7W3dJrHCG4ijHfIR6ODsaniasvUNjgjj7FwyLc3R4L_CvLgpaBejyZcYcuETCjgY38ZbNEEejAOf7p-hZvEZ_Pc"
+          alt="Admin Avatar"/>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Area -->
+  <div class="pt-24 px-10 pb-12 flex flex-col items-center justify-center min-h-[calc(100vh-80px)]">
+    <!-- Add Member Form Section -->
+    <div class="w-full max-w-3xl">
+      <div class="mb-8 flex items-center justify-between">
+        <div>
+          <h2 class="text-4xl font-extrabold tracking-tighter headline-font text-white mb-2">Ajouter un membre</h2>
+          <p class="text-slate-400 text-lg">Invitez un nouveau collaborateur à rejoindre l'espace SupportKit.</p>
+        </div>
+        <div class="hidden lg:block">
+          <span class="material-symbols-outlined text-primary text-6xl opacity-20">person_add</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Main Form Container -->
+        <div class="lg:col-span-8 bg-surface-container-low p-8 rounded-2xl shadow-xl shadow-black/40 border border-outline-variant/5">
+          <form action="#" class="space-y-6">
+            <div class="space-y-2">
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 headline-font ml-1">Nom complet</label>
+              <div class="relative group">
+                <input class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all placeholder:text-slate-600" placeholder="ex: Jean Dupont" type="text"/>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 headline-font ml-1">Adresse Email</label>
+              <div class="relative group">
+                <input class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all placeholder:text-slate-600" placeholder="jean.dupont@entreprise.fr" type="email"/>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 headline-font ml-1">Rôle</label>
+                <div class="relative">
+                  <select class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all appearance-none cursor-pointer">
+                    <option value="agent">Agent Support</option>
+                    <option value="manager">Manager d'équipe</option>
+                    <option value="admin">Administrateur</option>
+                    <option value="viewer">Observateur</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 headline-font ml-1">Projets d'accès</label>
+                <div class="relative">
+                  <select class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all h-[46px] overflow-hidden cursor-pointer" multiple="">
+                    <option selected="">SaaS Phoenix</option>
+                    <option>Mobile App V3</option>
+                    <option>Support Interne</option>
+                    <option>API Documentation</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">list</span>
+                </div>
+                <p class="text-[10px] text-slate-500 mt-1 italic">Maintenez Cmd/Ctrl pour plusieurs choix.</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <button class="w-full primary-gradient text-on-primary-container font-bold py-4 rounded-xl shadow-lg shadow-indigo-500/20 active:scale-[0.98] transition-all headline-font text-lg" type="submit">
+                Inviter le membre
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Sidebar Info -->
+        <div class="lg:col-span-4 space-y-6">
+          <div class="glass-panel p-6 rounded-2xl border border-white/5">
+            <h3 class="text-white font-bold mb-4 headline-font flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-sm">info</span>
+              Permissions du rôle
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                <span class="text-sm text-slate-300">Accès complet à la file d'attente des tickets assignés.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                <span class="text-sm text-slate-300">Capacité de répondre et clore les discussions.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-outline text-lg">cancel</span>
+                <span class="text-sm text-slate-500">Pas d'accès aux paramètres de facturation.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/10">
+            <h3 class="text-slate-400 font-bold mb-2 headline-font text-xs uppercase tracking-widest">Aperçu du profil</h3>
+            <div class="flex items-center gap-4 mt-4">
+              <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-primary/20">
+                <span class="material-symbols-outlined text-primary">person</span>
+              </div>
+              <div>
+                <p class="text-white font-bold text-sm">Nouvel utilisateur</p>
+                <p class="text-slate-500 text-xs">Attente d'invitation...</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative h-48 rounded-2xl overflow-hidden shadow-2xl group">
+            <img class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt6itx6TDURLEVRVZWIjvKIvzDTd2pc9l2-DKrFlIoNLxDZmtFGq2TzaHBnnuy4X_6PyfvxcyAZh_TczcPVwjTsiZJFbSvzn5nIGrb6Hf0TXNizzEwZjhY37OtlPYCaen2lz48eSmGXarftzGJwvru2ekYE4xA4m18CeWQXtZ0cwqKnECjD1mvXvJ5mLB1p6gkIF0R3LL5rgFbWZyL_wCEr4qg4_lG-mq5mOcfP5Psz8wr7wvYdN8yrxEMYxkFYCtvAgwR8XjCgEo"
+              alt="Office"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="text-white font-bold headline-font text-sm">Forcez votre équipe</p>
+              <p class="text-slate-400 text-[10px]">SupportKit centralise vos talents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body></html>
